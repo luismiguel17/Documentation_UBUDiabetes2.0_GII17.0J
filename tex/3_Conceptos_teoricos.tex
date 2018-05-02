@@ -1,0 +1,94 @@
+\capitulo{3}{Conceptos teóricos}
+
+En este apartado explicaremos aquellos conceptos que consideramos necesarios para la correcta comprensión de este proyecto.
+Así mismo,al tratarse de una nueva versión, es decir, de la actualización y/o modificación de una versión anterior, se ha decidido incluir únicamente conceptos nuevos, tanto orientados a la aplicación como a la Diabetes tipo I. El resto de conceptos comunes a la versión anterior pueden consultarse en las memorias de los proyectos de Mario López Jiménez~\cite{mario2016} y Lara Bartolomé Casado~\cite{larab2015}.
+
+
+
+\section{Diabetes Tipo I}
+En esta sección definiremos aquellos conceptos en los que la version anterior de la aplicación (UBUDiabetes 1.1) presentaba ciertos fallos. Para ello, tendremos en cuenta las recomendaciones de Bruno Martín Gómez en su proyecto~\cite{bruno2017}.
+
+\subsection{Hidratos de Carbono}
+
+Los hidratos de carbono o carbohidratos se definen como biomoleculas compuestas por carbono, hidrogeno y oxigeno, cuyas principales funciones en los seres vivos son el brindar energia inmediata y estructural~\cite{wiki:carbs}.
+El \textbf{recuento de carbohidratos} es esencial para el calculo de bolo corrector. ya que ayuda al usuario a controlar la glucosa en la sangre. Si se consigue in equilibrio adecuado entre carbohidratos ingeridos e insulina, el nivel de glucosa en la sangre se mantendrá dentro de los niveles deseados \cite{larab2015}.
+Para el calculo de Grs de HC (Hidratos de Carbono) el usuario deberá:
+\begin{itemize}
+	\item Buscar y seleccionar el/los alimento/s que va a ingerir.
+	\item Introducir la cantidad en gramos de dicho/s alimento/s.
+	\item Finalmente, la app deberá realizar el recuento de los gramos de HC en la suma de los distintos alimentos a partir de la tabla de la federación española de la diabetes~\cite{tablafe}.
+\end{itemize}
+\subsubsection{Sensibilidad a la insulina}
+En la Diabetes, la sensibilidad a la insulina se entiende por el valor de glucemia en mg/dl que se consigue reducir al administrar una unidad de análogo de insulina de acción rápida.
+Así mismo, se debe tener en cuenta que existen usuario con \textbf{resistencia a la insulina}, es decir, que presentan una condición en la cual los tejidos presentan una respuesta dismunuida para disponer de la glucosa circulante ante la acción de la insulina; en especial el hígado, el músculo esquelético, el tejido adiposo y el cerebro. Esta alteración en conjunto con la deficiencia de producción de insulina por el páncreas puede conducir después de algún tiempo al desarrollo de una diabetes mellitus tipo 2~\cite{resistenciaIns}.
+
+\subsubsection{Insulina residual}
+\subsubsection{Indice glucémico}
+
+Y subsecciones. 
+
+
+\section{UBUDiabtes 2.0}
+
+Las referencias se incluyen en el texto usando cite \cite{wiki:latex}. Para citar webs, artículos o libros \cite{koza92}.
+
+
+\section{Imágenes}
+
+Se pueden incluir imágenes con los comandos standard de \LaTeX, pero esta plantilla dispone de comandos propios como por ejemplo el siguiente:
+
+\imagen{escudoInfor}{Autómata para una expresión vacía}
+
+
+
+\section{Listas de items}
+
+Existen tres posibilidades:
+
+\begin{itemize}
+	\item primer item.
+	\item segundo item.
+\end{itemize}
+
+\begin{enumerate}
+	\item primer item.
+	\item segundo item.
+\end{enumerate}
+
+\begin{description}
+	\item[Primer item] más información sobre el primer item.
+	\item[Segundo item] más información sobre el segundo item.
+\end{description}
+	
+\begin{itemize}
+\item 
+\end{itemize}
+
+\section{Tablas}
+
+Igualmente se pueden usar los comandos específicos de \LaTeX o bien usar alguno de los comandos de la plantilla.
+
+\tablaSmall{Herramientas y tecnologías utilizadas en cada parte del proyecto}{l c c c c}{herramientasportipodeuso}
+{ \multicolumn{1}{l}{Herramientas} & App AngularJS & API REST & BD & Memoria \\}{ 
+HTML5 & X & & &\\
+CSS3 & X & & &\\
+BOOTSTRAP & X & & &\\
+JavaScript & X & & &\\
+AngularJS & X & & &\\
+Bower & X & & &\\
+PHP & & X & &\\
+Karma + Jasmine & X & & &\\
+Slim framework & & X & &\\
+Idiorm & & X & &\\
+Composer & & X & &\\
+JSON & X & X & &\\
+PhpStorm & X & X & &\\
+MySQL & & & X &\\
+PhpMyAdmin & & & X &\\
+Git + BitBucket & X & X & X & X\\
+Mik\TeX{} & & & & X\\
+\TeX{}Maker & & & & X\\
+Astah & & & & X\\
+Balsamiq Mockups & X & & &\\
+VersionOne & X & X & X & X\\
+} 
