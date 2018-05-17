@@ -1,18 +1,20 @@
 \capitulo{3}{Conceptos teóricos}
 
 En este apartado explicaremos aquellos conceptos que consideramos necesarios para la correcta comprensión de este proyecto.
-Así mismo,al tratarse de una nueva versión, es decir, de la actualización y/o modificación de una versión anterior, se ha decidido incluir únicamente conceptos nuevos, tanto orientados a la aplicación como a la Diabetes tipo I. El resto de conceptos comunes a la versión anterior pueden consultarse en las memorias de los proyectos de Mario López Jiménez~\cite{mario2016} y Lara Bartolomé Casado~\cite{larab2015}.
+Así mismo, al tratarse de una nueva versión, es decir, de la actualización y/o modificación de una versión anterior, se ha decidido incluir únicamente aquellos conceptos en los que la versión anterior de la aplicación daba problemas o no se obtuvieron resultados correctos, tanto orientados a la aplicación como a la Diabetes tipo I. El resto de los conceptos comunes a la versión anterior pueden consultarse en las memorias de los proyectos de Mario López Jiménez~\cite{mario2016} y Lara Bartolomé Casado~\cite{larab2015}.
 
+\section{Diabetes}
+Al tratarse de una app dirigida a personas que padecen diabetes tipo 1 vamos a presentar un breve resumen sobre el concepto de Diabetes.
 
+La diabetes es una enfermedad en la que los niveles de glucosa (azúcar) de la sangre están muy altos. La glucosa proviene de los alimentos que consume. La insulina es una hormona que ayuda a que la glucosa entre a las células para suministrarles energía. En la diabetes tipo 1, el cuerpo no produce insulina. En la diabetes tipo 2, la más común, el cuerpo no produce o no usa la insulina de manera adecuada. Sin suficiente insulina, la glucosa permanece en la sangre~\cite{medlineplus}.
 
-\section{Diabetes Tipo I}
-En esta sección definiremos aquellos conceptos en los que la version anterior de la aplicación (UBUDiabetes 1.1) presentaba ciertos fallos. Para ello, tendremos en cuenta las recomendaciones de Bruno Martín Gómez en su proyecto~\cite{bruno2017}.
+A continuación se explicarán aquellos conceptos teóricos en los que la versión anterior de la aplicación (UBUDiabetes 1.1) presentaba ciertos fallos. Para ello, tendremos en cuenta algunas de las recomendaciones de Bruno Martín Gómez en su proyecto~\cite{bruno2017}.
 
 \subsection{Hidratos de Carbono}
+Los hidratos de carbono o carbohidratos se definen como biomoléculas compuestas por carbono, hidrogeno y oxígeno, cuyas principales funciones en los seres vivos son el brindar energía inmediata y estructural~\cite{wiki:carbs}.
+El \textbf{recuento de carbohidratos} es esencial para el cálculo de bolo corrector. ya que ayuda al usuario a controlar la glucosa en la sangre. Si se consigue in equilibrio adecuado entre carbohidratos ingeridos e insulina, el nivel de glucosa en la sangre se mantendrá dentro de los niveles deseados \cite{larab2015}.
+Para el cálculo de Grs de HC (Hidratos de Carbono) el usuario deberá:
 
-Los hidratos de carbono o carbohidratos se definen como biomoleculas compuestas por carbono, hidrogeno y oxigeno, cuyas principales funciones en los seres vivos son el brindar energia inmediata y estructural~\cite{wiki:carbs}.
-El \textbf{recuento de carbohidratos} es esencial para el calculo de bolo corrector. ya que ayuda al usuario a controlar la glucosa en la sangre. Si se consigue in equilibrio adecuado entre carbohidratos ingeridos e insulina, el nivel de glucosa en la sangre se mantendrá dentro de los niveles deseados \cite{larab2015}.
-Para el calculo de Grs de HC (Hidratos de Carbono) el usuario deberá:
 \begin{itemize}
 	\item Buscar y seleccionar el/los alimento/s que va a ingerir.
 	\item Introducir la cantidad en gramos de dicho/s alimento/s.
@@ -20,11 +22,11 @@ Para el calculo de Grs de HC (Hidratos de Carbono) el usuario deberá:
 \end{itemize}
 \subsection{Sensibilidad a la insulina}
 En la Diabetes, la sensibilidad a la insulina se entiende por el valor de glucemia en mg/dl que se consigue reducir al administrar una unidad de análogo de insulina de acción rápida.
-Así mismo, se debe tener en cuenta que existen usuarios con \textbf{resistencia a la insulina}, es decir, que presentan una condición en la cual los tejidos presentan una respuesta dismunuida para disponer de la glucosa circulante ante la acción de la insulina; en especial el hígado, el músculo esquelético, el tejido adiposo y el cerebro. Esta alteración en conjunto con la deficiencia de producción de insulina por el páncreas puede conducir después de algún tiempo al desarrollo de una diabetes mellitus tipo 2~\cite{resistenciaIns}.
-Por el contrario, existen usuarios con una mayor sensibilidad a la insulina. Es por esto que Bruno Martín Gómez señala en su TFG~\cite{bruno2017} en el apartado "Recomendaciones para la versión UBUdiabetes 2.0.", que se deberían tener en cuenta los decimales en las unidades de insulina, ya que usuarios con mucha sensibilidad a la insulina, media unidad puede ser determinante.
+Así mismo, se debe tener en cuenta que existen usuarios con \textbf{resistencia a la insulina}, es decir, que presentan una condición en la cual los tejidos presentan una respuesta disminuida para disponer de la glucosa circulante ante la acción de la insulina; en especial el hígado, el músculo esquelético, el tejido adiposo y el cerebro. Esta alteración en conjunto con la deficiencia de producción de insulina por el páncreas puede conducir después de algún tiempo al desarrollo de una diabetes mellitus tipo 2~\cite{resistenciaIns}.
+Por el contrario, existen usuarios con una mayor sensibilidad a la insulina. Es por esto por lo que Bruno Martín Gómez señala en su TFG~\cite{bruno2017} en el apartado ``Recomendaciones para la versión UBUdiabetes 2.0.'', que se deberían tener en cuenta los decimales en las unidades de insulina, ya que usuarios con mucha sensibilidad a la insulina, media unidad puede ser determinante.
 
 \subsection{Insulina residual}
-Toda insulina tiene un \textbf{inicio de efecto} que es el periodo desde la inyección de la misma hasta que empieza a funcionar. Un \textbf{máximo efecto} o pico que es el periodo donde existe mas efecto insulínico, debe coincidir con la máxima concentración de hidratos de carbono en el organismo, y un \textbf{fin de efecto} que es la \textbf{\textit{insulina activa residual}} tras el fin del pico de acción.
+Toda insulina tiene un \textbf{inicio de efecto} que es el periodo desde la inyección de la misma hasta que empieza a funcionar. Un \textbf{máximo efecto} o pico que es el periodo donde existe más efecto insulínico, debe coincidir con la máxima concentración de hidratos de carbono en el organismo, y un \textbf{fin de efecto} que es la \textbf{\textit{insulina activa residual}} tras el fin del pico de acción.
 \subsection{Indice glucémico}
 El índice glucémico (glycemic index o GI) mide en qué medida los alimentos que contienen carbohidratos elevan la glucosa en la sangre.
 Los alimentos se clasifican en base a cómo se comparan a alimentos de referencia, ya sea glucosa o pan blanco. Un alimento con un GI alto eleva la glucosa en la sangre más rápido que los alimentos con un GI mediano o bajo~\cite{indicegluce}.
@@ -37,67 +39,13 @@ La grasa y fibra tienden a reducir el GI de un alimento. Como regla general, mie
 	\item Variedad — El arroz blanco instantáneo de grano largo tiene un GI más bajo que el arroz integral pero el arroz blanco de grano corto tiene un GI más alto que el arroz integral.
 \end{itemize}
 
-\section{UBUDiabtes 2.0}
+\section{Aplicación Móvil}
+Para comprender como funciona la aplicación UbuDiabetes2.0 primero debemos explicar en que consiste una \textit{Aplicación móvil o App}.El resto de los conceptos comunes a la versión anterior pueden consultarse en las memorias de los proyectos de Mario López Jiménez~\cite{mario2016} y Lara Bartolomé Casado~\cite{larab2015}.
 
-Las referencias se incluyen en el texto usando cite \cite{wiki:latex}. Para citar webs, artículos o libros \cite{koza92}.
+Una app es una aplicación informática diseñada para ser ejecutada en teléfonos inteligentes, tabletas y otros dispositivos móviles. Las aplicaciones permiten al usuario efectuar un conjunto de tareas de cualquier tipo: profesional, de ocio, educativas, de acceso a servicios, etc., facilitando las gestiones o actividades a desarrollar~\cite{wiki:app}.
 
-
-\section{Imágenes}
-
-Se pueden incluir imágenes con los comandos standard de \LaTeX, pero esta plantilla dispone de comandos propios como por ejemplo el siguiente:
-
-\imagen{escudoInfor}{Autómata para una expresión vacía}
+\subsection{UBUDiabtes 2.0}
+UbuDiabetes es una aplicación dirigida a diabéticos tipo 1 cuya función principal es ayudarlos a calcular con eficacia el bolo corrector de insulina, disminuyendo el riesgo de hipoglucemia. 
+Otras funcionalidades que presenta UBUDiabetes son : \textit{Historial de Glucemias}, \textit{Registro de Glucemias}, \textit{Consultar Ingestas}. Estas funcionalidades se explicaran más adelante.
 
 
-
-\section{Listas de items}
-
-Existen tres posibilidades:
-
-\begin{itemize}
-	\item primer item.
-	\item segundo item.
-\end{itemize}
-
-\begin{enumerate}
-	\item primer item.
-	\item segundo item.
-\end{enumerate}
-
-\begin{description}
-	\item[Primer item] más información sobre el primer item.
-	\item[Segundo item] más información sobre el segundo item.
-\end{description}
-	
-\begin{itemize}
-\item 
-\end{itemize}
-
-\section{Tablas}
-
-Igualmente se pueden usar los comandos específicos de \LaTeX o bien usar alguno de los comandos de la plantilla.
-
-\tablaSmall{Herramientas y tecnologías utilizadas en cada parte del proyecto}{l c c c c}{herramientasportipodeuso}
-{ \multicolumn{1}{l}{Herramientas} & App AngularJS & API REST & BD & Memoria \\}{ 
-HTML5 & X & & &\\
-CSS3 & X & & &\\
-BOOTSTRAP & X & & &\\
-JavaScript & X & & &\\
-AngularJS & X & & &\\
-Bower & X & & &\\
-PHP & & X & &\\
-Karma + Jasmine & X & & &\\
-Slim framework & & X & &\\
-Idiorm & & X & &\\
-Composer & & X & &\\
-JSON & X & X & &\\
-PhpStorm & X & X & &\\
-MySQL & & & X &\\
-PhpMyAdmin & & & X &\\
-Git + BitBucket & X & X & X & X\\
-Mik\TeX{} & & & & X\\
-\TeX{}Maker & & & & X\\
-Astah & & & & X\\
-Balsamiq Mockups & X & & &\\
-VersionOne & X & X & X & X\\
-} 
