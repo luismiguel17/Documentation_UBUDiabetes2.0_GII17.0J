@@ -1,0 +1,118 @@
+\begin{thebibliography}{10}
+
+\bibitem{larab2015}
+Lara~Bartolomé Casado.
+\newblock Salud electrónica y diabetes. elementos para el diseño de una
+  aplicación informática (app) para jóvenes diabéticos tipo i., 2015.
+
+\bibitem{bruno2017}
+Bruno~Martín Gómez.
+\newblock Evaluación de la eficacia, efectividad y usabilidad de la
+  aplicación par móviles ubudiabetes., 2017.
+
+\bibitem{mario2016}
+Mario~López Jiménez.
+\newblock Ubudiabetes: Aplicación de control de diabetes en dispositivos
+  móviles., 2016.
+
+\bibitem{androiddeveloper}
+Unknown.
+\newblock Android developer.
+\newblock \url{https://developer.android.com/?hl=es-419}, Unknown.
+
+\bibitem{medlineplus}
+Unknown.
+\newblock Diabetes.
+\newblock \url{https://medlineplus.gov/spanish/diabetes.html}, Unknown.
+
+\bibitem{gitHub}
+Unknown.
+\newblock Github.
+\newblock \url{https://guides.github.com/activities/hello-world/}, Unknown.
+
+\bibitem{indicegluce}
+Unknown.
+\newblock Indice glucémico.
+\newblock
+  \url{http://www.diabetes.org/es/alimentos-y-actividad-fisica/alimentos/que-voy-a-comer/comprension-de-los-carbohidratos/indice-glucemico-y-diabetes.html},
+  Unknown.
+
+\bibitem{sqlitebrowser}
+Unknown.
+\newblock Sqlite browser.
+\newblock \url{http://sqlitebrowser.org/}, Unknown.
+
+\bibitem{tablafe}
+Unknown.
+\newblock Tabla hc.
+\newblock
+  \url{http://www.fundaciondiabetes.org/upload/publicaciones_ficheros/71/TABLAHC.pdf/},
+  Unknown.
+
+\bibitem{vogel2010android}
+Lars Vogel.
+\newblock Android sqlite database and contentprovider-tutorial.
+\newblock {\em Java, Eclipse, Android and Web programming tutorials}, 8, 2010.
+
+\bibitem{wiki:androidsdk}
+Wikipedia.
+\newblock Android sdk --- wikipedia{,} la enciclopedia libre, 2017.
+\newblock [Internet; descargado 18-mayo-2018].
+
+\bibitem{wiki:junit}
+Wikipedia.
+\newblock Junit --- wikipedia{,} la enciclopedia libre, 2017.
+\newblock [Internet; descargado 21-mayo-2018].
+
+\bibitem{wiki:texmaker}
+Wikipedia.
+\newblock Texmaker --- wikipedia{,} la enciclopedia libre, 2017.
+\newblock [Internet; descargado 21-mayo-2018].
+
+\bibitem{wiki:adobephotoshop}
+Wikipedia.
+\newblock Adobe photoshop --- wikipedia{,} la enciclopedia libre, 2018.
+\newblock [Internet; descargado 21-mayo-2018].
+
+\bibitem{wiki:android}
+Wikipedia.
+\newblock Android --- wikipedia{,} la enciclopedia libre, 2018.
+\newblock [Internet; descargado 17-mayo-2018].
+
+\bibitem{wiki:androidStudio}
+Wikipedia.
+\newblock Android studio --- wikipedia{,} la enciclopedia libre, 2018.
+\newblock [Internet; descargado 21-mayo-2018].
+
+\bibitem{wiki:app}
+Wikipedia.
+\newblock Aplicación móvil --- wikipedia{,} la enciclopedia libre, 2018.
+\newblock [Internet; descargado 17-mayo-2018].
+
+\bibitem{wiki:espresso}
+Wikipedia.
+\newblock Espresso (framework) --- wikipedia{,} la enciclopedia libre, 2018.
+\newblock [Internet; descargado 21-mayo-2018].
+
+\bibitem{wiki:git}
+Wikipedia.
+\newblock Git --- wikipedia{,} la enciclopedia libre, 2018.
+\newblock [Internet; descargado 21-mayo-2018].
+
+\bibitem{wiki:carbs}
+Wikipedia.
+\newblock Glúcido --- wikipedia{,} la enciclopedia libre, 2018.
+\newblock [Internet; descargado 26-abril-2018].
+
+\bibitem{wiki:java}
+Wikipedia.
+\newblock Java (lenguaje de programación) --- wikipedia{,} la enciclopedia
+  libre, 2018.
+\newblock [Internet; descargado 18-mayo-2018].
+
+\bibitem{wiki:latex}
+Wikipedia.
+\newblock Latex --- wikipedia{,} la enciclopedia libre, 2018.
+\newblock [Internet; descargado 21-mayo-2018].
+
+\end{thebibliography}

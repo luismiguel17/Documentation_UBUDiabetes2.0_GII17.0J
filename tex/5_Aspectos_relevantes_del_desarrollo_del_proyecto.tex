@@ -1,7 +1,118 @@
 \capitulo{5}{Aspectos relevantes del desarrollo del proyecto}
+A continuación, se listarán los aspectos con mayor relevancia para la comprensión y el correcto funcionamiento del proyecto. A su vez, se incluirán únicamente los aspectos relevantes encontrados en esta nueva versión.
+A si mismo, se pueden consultar los aspectos relevantes comunes y no comunes con la versión anterior en la memoria del proyecto de Mario López Jiménez~\cite{mario2016}.
+\section{Formación}
+Para la realización de este proyecto, se requería algo de experiencia previa en \textbf{Java}, \textbf{Android} y \textbf{Testing}, de los cuales, a excepción de Java, carecía en un principio. Para obtener la experiencia que exigía el proyecto, se llevó a cabo una formación en esos temas mediante lecturas de manuales, documentos online, e incluso, mediante la visualización de pequeños tutoriales encontrados en internet. Una vez que se adquirió cierto nivel de conocimientos, se empezó el desarrollo de una nueva versión para la aplicación \textbf{UBUDiabetes} en \textbf{Android Studio}.
+Cabe destacar que, durante el desarrollo del proyecto, se continuó con la formación y adquisición de ciertos conocimientos que eran necesarios para continuar con la realización del proyecto.
 
-Este apartado pretende recoger los aspectos más interesantes del desarrollo del proyecto, comentados por los autores del mismo.
-Debe incluir desde la exposición del ciclo de vida utilizado, hasta los detalles de mayor relevancia de las fases de análisis, diseño e implementación.
-Se busca que no sea una mera operación de copiar y pegar diagramas y extractos del código fuente, sino que realmente se justifiquen los caminos de solución que se han tomado, especialmente aquellos que no sean triviales.
-Puede ser el lugar más adecuado para documentar los aspectos más interesantes del diseño y de la implementación, con un mayor hincapié en aspectos tales como el tipo de arquitectura elegido, los índices de las tablas de la base de datos, normalización y desnormalización, distribución en ficheros3, reglas de negocio dentro de las bases de datos (EDVHV GH GDWRV DFWLYDV), aspectos de desarrollo relacionados con el WWW...
-Este apartado, debe convertirse en el resumen de la experiencia práctica del proyecto, y por sí mismo justifica que la memoria se convierta en un documento útil, fuente de referencia para los autores, los tutores y futuros alumnos.
+Por otra parte, al tratarse del desarrollo de una nueva versión, se realizo un estudio previo del TFG de Lara Bartolomé Casado~\cite{larab2015} y del TFG de Mario López Jiménez~\cite{mario2016} con el propósito de comprender la naturaleza y funcionalidad de la aplicación UBUDiabetes. .  
+
+\section{Ciclo de vida del proyecto}
+Si tenemos en cuenta el momento en que se empezó a realizar la formación en Android y Testing, se puede decir que el proyecto dio comienzo el 8 de Enero de 2018 tras una previa reunión con Raúl, tutor de este.
+El desarrollo del proyecto se llevo a cabo en base a dos tipos de reuniones.
+Por un lado, reuniones con el tutor del proyecto, cuyos objetivos principales eran revisar el trabajo realizado hasta la fecha y fijar nuevas tareas de cara a la siguiente reunión. Estas reuniones se acordaron realizarlas cada semana, teniendo en cuenta la disponibilidad de los miembros. 
+Por otro lado, se llevaron a cabo reuniones entre Raúl Marticorena Sánchez y los clientes de la aplicación, en este caso, se trataba de miembros del Área de enfermería (Grado de Enfermería) de la facultad de Ciencias de la Salud, como Diego Serrano Gómez y Jesús Puente Alcaraz, tutores del proyecto ``Salud electrónica y diabetes: Elementos para el diseño de una aplicación informática (APP) para jóvenes diabéticos de tipo I.'', llevado a cabo por Lara Bartolomé Casado. Estas reuniones tenían por cometido mostrarles el trabajo realizado, tomar nota de posibles mejoras y/o nuevos requisitos a incluir y solicitar a los clientes nuevos casos de prueba reales para continuar con la validación de la aplicación.
+La evolución cronología del proyecto es la siguiente:
+Como primer paso, una vez asignado el proyecto y realizada la formación necesaria para su desarrollo, se importó el proyecto de la versión que se tenía hasta el momento de la aplicación. Este proyecto ya incluía ciertas mejoras llevadas a cabo por Raúl, quien me entrego el proyecto a través de un e-mail ya que este proyecto no se encontraba visible en ningún repositorio.
+
+Tras la importación del proyecto previo, se realizaron ciertas configuraciones en Android Studio para poder ejecutar el proyecto y visualizar en un emulador creado previamente lo que se tenía hasta el momento. Estas configuraciones fueron necesarias ya que el proyecto que se tenia hasta entonces fue realizado en una versión 1.X de Android Studio y la versión que disponía de Android Studio para realizar una nueva versión era superior a la 3.x, lo que provocó ciertas incompatibilidades.
+Una vez ejecutada la aplicación por primera vez, se dio comienzo al desarrollo de una nueva versión de la aplicación. Las tareas en cuanto al desarrollo de la nueva versión se ejecutaron en el siguiente orden:
+\begin{itemize}
+	\item Corregir las clases y la interfaz gráfica relacionada con el cálculo del Bolo Corrector.
+	\item Llevar a cabo en paralelo el desarrollo de las pruebas unitarias para el cálculo del Bolo Corrector.
+	\item Añadir nuevas clases e interfaces gráficas según los nuevos requisitos definidos.
+	\item Llevar a cabo en paralelo el desarrollo de las pruebas unitarias, integración y/o pruebas de Interfaz de Usuario.
+	\item Realizar versiones beta.
+\end{itemize}
+Como resultado de este proceso, se obtuvo una versión final para la aplicación \textbf{UBUDiabetes}.
+
+\section{Decisiones Técnicas}
+En este apartado explicaran las decisiones tomadas en cuanto a los aspectos técnicos del mismo.
+Se han categorizado en varios apartados según las \textit{Activities} (Pantallas) que forman parte de la interfaz gráfica y en las que se han incluido modificaciones respecto a la versión anterior.
+Las decisiones técnicas comunes con la versión anterior se pueden consultar en la memoria del proyecto de Mario López Jiménez~\cite{mario2016}.
+\subsection{Nuevo Proyecto}
+Tras analizar el proyecto del que se partía, es decir, del proyecto de Mario, se comprobó que al realizarse en una versión de Android Studio 1.x no disponía de la estructura necesaria para la creación de las Pruebas Instrumentadas que se requerían en este proyecto~\ref{fig:Estructura_ProyectoMario}:
+\imagen{Estructura_ProyectoMario}{Estructura Proyecto UBUDiabetes 1.0}{0.7}
+Por ello, se tomó la decisión, de crear un nuevo proyecto desde cero, el cual crearía automáticamente la estructura necesaria para el desarrollo de las distintas Pruebas Instrumentadas. Una vez creado un nuevo proyecto se migraron los datos del antiguo proyecto al nuevo, el cual, tenía la siguiente estructura~\ref{fig:Estructura_ProyectoActual}:
+\imagen{Estructura_ProyectoActual}{Estructura Proyecto UBUDiabetes 2.0}{0.7}
+La versión de Android en la que se desarrolló la aplicación es distinta a la versión previa desarrollada por Mario. Se tuvo en cuenta la información proporcionada en la pagina \textbf{Android Developer}~\cite{androiddeveloper} que muestra datos sobre la cantidad relativa de dispositivos que usan una versión determinada de la plataforma Android.
+
+UBUDiabetes 1.0~\ref{fig:Version_Plataforma_Mario}:
+\imagen{Version_Plataforma_Mario}{Versión Android UBUDiabetes 1.0}{0.7}
+UBUDiabetes 2.0~\ref{fig:Version_Plataforma_Luis}:
+\imagen{Version_Plataforma_Luis}{Versión Android UBUDiabetes 2.0}{0.7}
+\begin{itemize}
+	\item \textbf{\texttt{compileSdkVersion}}: Indica desde que nivel de API se ha compilado la aplicación.
+	\item \textbf{\texttt{minSdkVersion}}: Valor entero que designa el nivel de API mínimo que se requiere para que se ejecute la aplicación. El sistema de Android impedirá que el usuario instale la aplicación si el nivel de API del sistema es inferior al valor especificado en este atributo. Siempre debes declarar este atributo.
+	\item \textbf{\texttt{targetSdkVersion}}: Valor entero que designa el nivel de API al cual se dirige la aplicación. Si no se configura, el valor predeterminado es igual al valor asignado a la minSdkVersion.
+Este atributo informa al sistema que has realizado las pruebas en la versión prevista y el sistema no deberá habilitar ningún comportamiento de compatibilidad a fin de mantener la compatibilidad con versiones posteriores de tu aplicación y la versión prevista. La aplicación puede continuar ejecutándose en versiones más antiguas (anteriores a la minSdkVersion).
+\end{itemize}
+\subsection{Splash Screen}
+Se propuso a Raúl, tutor de este proyecto, la idea de implementar una \textbf{``Splash Screen''} para presentar la aplicación a los usuarios. Tras el visto bueno de esta idea, se introdujo la ``Splash Screen'' la cual se lanzará primero siempre que se ejecute la aplicación. Esta pantalla contenía una imagen de fondo con el nombre y color base de la aplicación y una \texttt{progressbar}~\ref{fig:SplashScreen}.
+\imagen{SplashScreen}{Splash Screen}{0.6}
+
+\subsection{Perfil-Registro}
+Aunque la pantalla de Perfil-Registro ya estaba implementada~\ref{fig:Registro_Perfil_Mario}, se tomó la decisión de modificar su diseño desde cero con el fin de conseguir un diseño más atractivo para el usuario y que vaya acorde con la idea planteada por los miembros del Área de Enfermería mencionados anteriormente.\\
+UBUDiabetes 1.0~\ref{fig:Registro_Perfil_Mario}:
+\imagen{Registro_Perfil_Mario}{Registro-Perfil UBUDiabetes 1.0}{0.6}
+\newpage
+UBUDiabetes 2.0~\ref{fig:Registro_Perfil_LuisMiguel_1}~\ref{fig:Registro_Perfil_LuisMiguel_2}:
+\imagen{Registro_Perfil_LuisMiguel_1}{Registro-Perfil UBUDiabetes 2.0 (A)}{0.4}
+\imagen{Registro_Perfil_LuisMiguel_2}{Registro-Perfil UBUDiabetes 2.0 (B)}{0.4}
+\newpage
+\subsection{Menú Principal}
+Se modifico el diseño inicial de esta pantalla al aumentar el numero de opciones principales disponibles para el usuario en la aplicación UBUDiabetes. Así mismo, se busco implementar un diseño mas atractivo e interactivo para el usuario.\\
+UBUDiabetes 1.0~\ref{fig:Menu_Principal_Mario}:
+\imagen{Menu_Principal_Mario}{Menú principal UBUDiabetes 1.0}{0.3}
+UBUDiabetes 2.0~\ref{fig:Menu_Principal_Luis}:
+\imagen{Menu_Principal_Luis}{Menú principal UBUDiabetes 2.0}{0.3}
+\subsection{Carbohidratos}
+No solo se modificó completamente el diseño de esta pantalla, sino que, también se modificó su código ya que esta pantalla realiza la función principal de la aplicación, que es, el calculo del bolo corrector. En el trabajo de finde de grado realizado por Bruno Martín Gómez~\cite{bruno2017} se descubrieron ciertos fallos en la versión previa de UBUDiabetes 2.0. Uno de estos fallos estaba relacionado con el calculo del bolo corrector, el cual no obtenía los resultados esperados en ciertos casos, lo que supuso un problema para los usuarios. Tras corregir este fallo, se añadieron nuevos elementos en el diseño. Estos elementos fueron añadidos teniendo en cuenta los nuevos requisitos solicitados por los clientes.\\
+\begin{itemize}
+	\item \textbf{Buscador de alimentos}: Una vista de texto editable que muestra las sugerencias de finalización de forma automática mientras el usuario escribe. La lista de sugerencias se muestra en un menú desplegable desde el cual el usuario puede elegir un elemento para reemplazar el contenido del cuadro de edición. La lista de sugerencias se obtiene de un \textit{adaptador de datos} y aparece solo después de un número dado de caracteres definidos por el umbral.
+	\item \textbf{Lista de alimentos}: Lista que contiene todos los alimentos tomados de la tabla de raciones de hidratos de carbono de la \textbf{FUNDACIÓN ESPAÑOLA PARA LA DIABETES}~\cite{tablafe}.
+	\item \textbf{Lista de Ingesta}: Lista que muestra los alimentos que el usuario va introduciendo para el cálculo de hidratos de carbono junto con su cantidad en gramos y su índice glucémico. 
+	\item \textbf{Botón eliminar alimento}: Al mantener seleccionado un alimento de la lista de ingesta, se da la opción al usuario de eliminar dicho alimento de la lista.
+	\item \textbf{Bolo corrector e Hidratos de carbono parcial}: Textos que muestran al usuario la suma de hidratos de carbono y el bolo calculado según los alimentos introducidos en la lista de ingesta.
+\end{itemize}
+\newpage
+UBUDiabetes 1.0~\ref{fig:Carbohidratos_Mario}:
+\imagen{Carbohidratos_Mario}{Carbohidratos UBUDiabetes 1.0}{0.3}
+UBUDiabetes 2.0~\ref{fig:Carbohidratos_Luis}:
+\imagen{Carbohidratos_Luis}{Carbohidratos UBUDiabetes 2.0}{0.3}
+\newpage
+\subsection{Listas de Ingestas y Detalles de la lista}
+Estas nueva pantallas se añadieron teniendo en cuenta las recomendaciones de los usuarios recogidas en el trabajo de fin de grado de Bruno Martín Gómez~\cite{bruno2017}.
+Para su implementación, se propuso a Raúl la creación de dos tablas, ``listaingesta'' y ``detalleslistaingesta'', las cuales están asociadas entre si de tal manera que una fila de la tabla “listaingesta” puede estar relacionada con una o varias filas  de la tabla ``detalleslistaingesta''
+\begin{itemize}
+	\item Listas de Ingestas~\ref{fig:Listas_Ingestas}: Esta pantalla muestra los registros de todos los cálculos del bolo corrector que se han llevado a cabo por el usuario. Cada registro muestra su identificador, su fecha de registro, la suma total de los Hidratos de Carbono consumidos y el bolo calculado.
+	\imagen{Listas_Ingestas}{Listas de Ingestas}{0.3} 
+	\item Detalles de la lista~\ref{fig:Detalles_Lista_Ingesta}: Esta pantalla muestra con detalle cada uno de los alimentos ingeridos por el usuario según la lista de ingesta seleccionada en la pantalla ``Listas de Ingestas''.
+	\imagen{Detalles_Lista_Ingesta}{Detalles de la lista}{0.3}
+\end{itemize}
+\subsection{Ajustes}
+UBUDiabetes 1.o contaba con un submenú dentro de la pantalla Menú Principal. Este submenú tenía dos opciones: Ajustes de Perfil y Acerca de~\ref{fig:submenuPrincipal_Mario}.
+\imagen{submenuPrincipal_Mario}{Submenú Principal UBUDiabetes 1.0}{0.3}
+Pensando en la escalabilidad de la aplicación, se tomó la decisión de modificar este submenú.
+\begin{itemize}
+	\item Se mantuvo la opción Acerca de, que muestra un pequeño mensaje en pantalla con información acerca de la aplicación~\ref{fig:submenuPrincipal_Luis}.
+	\imagen{submenuPrincipal_Luis}{Submenú Principal UBUDiabetes 2.0}{0.3}
+	\item Se modifico la opción Ajustes de Perfil. Esta opción paso a llamarse únicamente Ajustes. Dicha opción nos llevara a una nueva pantalla en la que se incluirían todas las opciones de configuración necesarias para el usuario y/o configuración de la aplicación~\ref{fig:Ajustes_Luis}.
+	\imagen{Ajustes_Luis}{Ajustes UBUDiabetes 2.0}{0.3}
+\end{itemize}  
+\subsection{Otras decisiones}
+\begin{itemize}
+	\item Diseño mediante \textit{fragments}: Al igual que UBUDiabetes 1.0, este proyecto mantiene el diseño de sus pantallas mediante \textit{fragments}, posibilitando así, una futura migración a dispositivos tablet.
+	\item \textit{SharedPreferences}: Se mantiene el uso de esta interfaz para acceder y modificar los datos de preferencia del usuario. Estos datos se pueden obtener gracias al \textit{método} \textit{getSharedPreferences}. Las modificaciones de las preferencias deben pasar por un objeto \textit{SharedPreferences.Editor} para garantizar que los valores de preferencia permanezcan en un estado constante y controlados.
+	\item \textit{ListAdapters} personalizados: UBUDiabetes 2.0 hace uso de varias listas personalizadas: Pantalla Ajustes, Pantalla Listas de Ingestas, Pantalla Detalles de la lista, Pantalla Carbohidratos. Los datos de estas listas se muestran gracias a los Adaptadores que nos proporciona Android. Estos adaptadores funcionan como un puente entre el componente de la interfaz de usuario, en nuestro caso, una \textit{ListView}, y la fuente de datos que nos ayuda a completar los datos en el componente de la interfaz de usuario. De esta forma, la \textit{ListView} puede mostrar cualquier dato siempre que esté envuelto en un \textit{ListAdapter}.
+	Cada ListAdapter está diseñado según el diseño de las filas de las listas que se desean mostrar al usuario. Esta decisión se tomo pensando en la escalabilidad de la aplicación, si en un futuro de desean modificar estas listas, simplemente bastaría con modificador los adaptadores de dichas listas~\ref{fig:Adapter_Android}.
+	\imagen{Adapter_Android}{Adaptadores Android}{0.8}
+	\newpage
+	\item \textit{DataBaseManager y DataBaseHelper}: UBUDiabtes 2.0 mantiene estas clases, que son las encargadas de la persistencia de la aplicación.
+	\item \textit{Arrays.xml}: Para almacenar la información de los alimentos, UBUDiabetes 2.0 hace uso de los archivos .xml que dispone Android Studio, así se evitaría la saturación de código~\ref{fig:raciones_UBUDiabetes1} en las clases principales. Estos archivos se encuentran separados del código principal~\ref{fig:Arrays_AndroidStudio}.
+	\imagen{raciones_UBUDiabetes1}{Raciones de HC-UBUDiabetes 1.0}{0.4}
+	\imagen{Arrays_AndroidStudio}{Arrays.xlm Android Studio}{0.4}
+	\imagen{raciones_UBUDiabetes2}{Raciones de HC-UBUDiabetes 2.0}{0.4}
+	\item Iconos personalizados: Se crearon nuevos iconos con la herramienta \textit{Photoshop CC 2017} pensando en la creación de una aplicación amigable y intuitiva. Así mismo, los iconos añaden cierto atractivo y originalidad en cuanto al diseño de la interfaz gráfica del usuario.
+\end{itemize}
+	

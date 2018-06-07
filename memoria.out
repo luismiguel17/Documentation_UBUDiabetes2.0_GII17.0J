@@ -6,13 +6,27 @@
 \BOOKMARK [1][-]{section.2.1}{ Objetivos Generales}{chapter*.5}% 6
 \BOOKMARK [1][-]{section.2.2}{ Objetivos de la aplicaci\363n}{chapter*.5}% 7
 \BOOKMARK [0][-]{chapter*.6}{Conceptos te\363ricos}{}% 8
-\BOOKMARK [1][-]{section.3.1}{Diabetes Tipo I}{chapter*.6}% 9
-\BOOKMARK [1][-]{section.3.2}{UBUDiabtes 2.0}{chapter*.6}% 10
-\BOOKMARK [1][-]{section.3.3}{Im\341genes}{chapter*.6}% 11
-\BOOKMARK [1][-]{section.3.4}{Listas de items}{chapter*.6}% 12
-\BOOKMARK [1][-]{section.3.5}{Tablas}{chapter*.6}% 13
-\BOOKMARK [0][-]{chapter*.12}{T\351cnicas y herramientas}{}% 14
-\BOOKMARK [0][-]{chapter*.13}{Aspectos relevantes del desarrollo del proyecto}{}% 15
-\BOOKMARK [0][-]{chapter*.14}{Trabajos relacionados}{}% 16
-\BOOKMARK [0][-]{chapter*.15}{Conclusiones y L\355neas de trabajo futuras}{}% 17
-\BOOKMARK [0][-]{chapter*.16}{Bibliograf\355a}{}% 18
+\BOOKMARK [1][-]{section.3.1}{Diabetes}{chapter*.6}% 9
+\BOOKMARK [1][-]{section.3.2}{Aplicaci\363n M\363vil}{chapter*.6}% 10
+\BOOKMARK [0][-]{chapter*.13}{T\351cnicas y herramientas}{}% 11
+\BOOKMARK [1][-]{section.4.1}{Android}{chapter*.13}% 12
+\BOOKMARK [1][-]{section.4.2}{Android Studio}{chapter*.13}% 13
+\BOOKMARK [1][-]{section.4.3}{AVDManager}{chapter*.13}% 14
+\BOOKMARK [1][-]{section.4.4}{SDK}{chapter*.13}% 15
+\BOOKMARK [1][-]{section.4.5}{SQLite}{chapter*.13}% 16
+\BOOKMARK [1][-]{section.4.6}{DB Browser for SQLite}{chapter*.13}% 17
+\BOOKMARK [1][-]{section.4.7}{Java}{chapter*.13}% 18
+\BOOKMARK [1][-]{section.4.8}{JUnit}{chapter*.13}% 19
+\BOOKMARK [1][-]{section.4.9}{Espresso}{chapter*.13}% 20
+\BOOKMARK [1][-]{section.4.10}{Git}{chapter*.13}% 21
+\BOOKMARK [1][-]{section.4.11}{GitHub-Desktop}{chapter*.13}% 22
+\BOOKMARK [1][-]{section.4.12}{Latext}{chapter*.13}% 23
+\BOOKMARK [1][-]{section.4.13}{Texmaker}{chapter*.13}% 24
+\BOOKMARK [1][-]{section.4.14}{Photoshop CC 2017}{chapter*.13}% 25
+\BOOKMARK [0][-]{chapter*.30}{Aspectos relevantes del desarrollo del proyecto}{}% 26
+\BOOKMARK [1][-]{section.5.1}{Formaci\363n}{chapter*.30}% 27
+\BOOKMARK [1][-]{section.5.2}{Ciclo de vida del proyecto}{chapter*.30}% 28
+\BOOKMARK [1][-]{section.5.3}{Decisiones T\351cnicas}{chapter*.30}% 29
+\BOOKMARK [0][-]{chapter*.39}{Trabajos relacionados}{}% 30
+\BOOKMARK [0][-]{chapter*.40}{Conclusiones y L\355neas de trabajo futuras}{}% 31
+\BOOKMARK [0][-]{chapter*.41}{Bibliograf\355a}{}% 32
