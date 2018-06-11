@@ -7,58 +7,61 @@
 \contentsline {chapter}{Objetivos del proyecto}{3}{chapter*.5}
 \contentsline {section}{\numberline {2.1} Objetivos Generales}{4}{section.2.1}
 \contentsline {section}{\numberline {2.2} Objetivos de la aplicaci\IeC {\'o}n}{4}{section.2.2}
-\contentsline {chapter}{Conceptos te\IeC {\'o}ricos}{5}{chapter*.6}
-\contentsline {section}{\numberline {3.1}Diabetes}{5}{section.3.1}
-\contentsline {subsection}{Hidratos de Carbono}{6}{section*.7}
-\contentsline {subsection}{Sensibilidad a la insulina}{6}{section*.8}
-\contentsline {subsection}{Insulina residual}{6}{section*.9}
-\contentsline {subsection}{Indice gluc\IeC {\'e}mico}{7}{section*.10}
-\contentsline {subsubsection}{\IeC {\textquestiondown }Qu\IeC {\'e} afecta el GI de un alimento?}{7}{section*.11}
-\contentsline {section}{\numberline {3.2}Aplicaci\IeC {\'o}n M\IeC {\'o}vil}{7}{section.3.2}
-\contentsline {subsection}{UBUDiabtes 2.0}{8}{section*.12}
-\contentsline {chapter}{T\IeC {\'e}cnicas y herramientas}{9}{chapter*.13}
-\contentsline {section}{\numberline {4.1}Android}{9}{section.4.1}
-\contentsline {subsection}{Caracter\IeC {\'\i }sticas}{9}{section*.14}
-\contentsline {subsection}{Arquitectura}{12}{section*.15}
-\contentsline {subsection}{Versiones}{13}{section*.16}
-\contentsline {section}{\numberline {4.2}Android Studio}{14}{section.4.2}
-\contentsline {subsection}{Caracter\IeC {\'\i }sticas}{14}{section*.17}
-\contentsline {subsection}{Plataformas}{15}{section*.18}
-\contentsline {subsection}{Requisitos del sistema}{15}{section*.19}
-\contentsline {section}{\numberline {4.3}AVDManager}{16}{section.4.3}
-\contentsline {subsection}{\IeC {\textquestiondown } Qu\IeC {\'e} significa?}{16}{section*.20}
-\contentsline {subsection}{\IeC {\textquestiondown } Para qu\IeC {\'e} sirve ?}{16}{section*.21}
-\contentsline {subsection}{\IeC {\textquestiondown } C\IeC {\'o}mo se Configura ?}{16}{section*.22}
-\contentsline {subsection}{\IeC {\textquestiondown } C\IeC {\'o}mo se utiliza ?}{16}{section*.23}
-\contentsline {section}{\numberline {4.4}SDK}{17}{section.4.4}
-\contentsline {section}{\numberline {4.5}SQLite}{17}{section.4.5}
-\contentsline {subsection}{\IeC {\textquestiondown } Qu\IeC {\'e} es SQLite ?}{17}{section*.24}
-\contentsline {subsection}{SQLite en Android}{18}{section*.25}
-\contentsline {section}{\numberline {4.6}DB Browser for SQLite}{18}{section.4.6}
-\contentsline {subsection}{\IeC {\textquestiondown } Qu\IeC {\'e} es ?}{18}{section*.26}
-\contentsline {subsection}{\IeC {\textquestiondown } Qu\IeC {\'e} no es?}{19}{section*.27}
-\contentsline {section}{\numberline {4.7}Java}{19}{section.4.7}
-\contentsline {section}{\numberline {4.8}JUnit}{19}{section.4.8}
-\contentsline {subsection}{JUnit en Android Studio}{20}{section*.28}
-\contentsline {section}{\numberline {4.9}Espresso}{20}{section.4.9}
-\contentsline {section}{\numberline {4.10}Git}{21}{section.4.10}
-\contentsline {subsection}{Caracter\IeC {\'\i }sticas}{21}{section*.29}
-\contentsline {section}{\numberline {4.11}GitHub-Desktop}{22}{section.4.11}
-\contentsline {section}{\numberline {4.12}Latext}{23}{section.4.12}
-\contentsline {section}{\numberline {4.13}Texmaker}{23}{section.4.13}
-\contentsline {section}{\numberline {4.14}Photoshop CC 2017}{23}{section.4.14}
-\contentsline {chapter}{Aspectos relevantes del desarrollo del proyecto}{25}{chapter*.30}
-\contentsline {section}{\numberline {5.1}Formaci\IeC {\'o}n}{25}{section.5.1}
-\contentsline {section}{\numberline {5.2}Ciclo de vida del proyecto}{26}{section.5.2}
-\contentsline {section}{\numberline {5.3}Decisiones T\IeC {\'e}cnicas}{27}{section.5.3}
-\contentsline {subsection}{Nuevo Proyecto}{27}{section*.31}
-\contentsline {subsection}{Splash Screen}{29}{section*.32}
-\contentsline {subsection}{Perfil-Registro}{30}{section*.33}
-\contentsline {subsection}{Men\IeC {\'u} Principal}{33}{section*.34}
-\contentsline {subsection}{Carbohidratos}{34}{section*.35}
-\contentsline {subsection}{Listas de Ingestas y Detalles de la lista}{36}{section*.36}
-\contentsline {subsection}{Ajustes}{37}{section*.37}
-\contentsline {subsection}{Otras decisiones}{39}{section*.38}
-\contentsline {chapter}{Trabajos relacionados}{43}{chapter*.39}
-\contentsline {chapter}{Conclusiones y L\IeC {\'\i }neas de trabajo futuras}{45}{chapter*.40}
-\contentsline {chapter}{Bibliograf\'{\i }a}{47}{chapter*.41}
+\contentsline {chapter}{Conceptos te\IeC {\'o}ricos}{7}{chapter*.6}
+\contentsline {section}{\numberline {3.1}Diabetes}{7}{section.3.1}
+\contentsline {subsection}{Hidratos de Carbono}{8}{section*.7}
+\contentsline {subsection}{Sensibilidad a la insulina}{8}{section*.8}
+\contentsline {subsection}{Insulina residual}{8}{section*.9}
+\contentsline {subsection}{Indice gluc\IeC {\'e}mico}{9}{section*.10}
+\contentsline {subsubsection}{\IeC {\textquestiondown }Qu\IeC {\'e} afecta el GI de un alimento?}{9}{section*.11}
+\contentsline {section}{\numberline {3.2}Aplicaci\IeC {\'o}n M\IeC {\'o}vil}{9}{section.3.2}
+\contentsline {subsection}{Testing en aplicaciones m\IeC {\'o}viles}{10}{section*.12}
+\contentsline {subsubsection}{Fundamentos del Testing}{10}{section*.13}
+\contentsline {subsection}{Interacci\IeC {\'o}n Hombre-M\IeC {\'a}quina}{11}{section*.14}
+\contentsline {subsubsection}{Principios del dise\IeC {\~n}o}{11}{section*.15}
+\contentsline {subsection}{UBUDiabetes 2.0}{12}{section*.16}
+\contentsline {chapter}{T\IeC {\'e}cnicas y herramientas}{13}{chapter*.17}
+\contentsline {section}{\numberline {4.1}Android}{13}{section.4.1}
+\contentsline {subsection}{Caracter\IeC {\'\i }sticas}{14}{section*.18}
+\contentsline {subsection}{Arquitectura}{14}{section*.19}
+\contentsline {subsection}{Versiones}{17}{section*.20}
+\contentsline {section}{\numberline {4.2}Android Studio}{18}{section.4.2}
+\contentsline {subsection}{Caracter\IeC {\'\i }sticas}{18}{section*.21}
+\contentsline {subsection}{Plataformas}{19}{section*.22}
+\contentsline {subsection}{Requisitos del sistema}{19}{section*.23}
+\contentsline {subsection}{AVDManager}{20}{section*.24}
+\contentsline {subsubsection}{Concepto}{20}{section*.25}
+\contentsline {subsubsection}{Funcionalidad}{20}{section*.26}
+\contentsline {subsubsection}{Configuraci\IeC {\'o}n}{20}{section*.27}
+\contentsline {subsubsection}{Modo de empleo - Ejecuci\IeC {\'o}n}{20}{section*.28}
+\contentsline {subsection}{SDK}{21}{section*.29}
+\contentsline {section}{\numberline {4.3}SQLite}{21}{section.4.3}
+\contentsline {subsection}{Concepto}{21}{section*.30}
+\contentsline {subsection}{SQLite en Android}{22}{section*.31}
+\contentsline {section}{\numberline {4.4}DB Browser for SQLite}{22}{section.4.4}
+\contentsline {subsection}{Concepto}{22}{section*.32}
+\contentsline {section}{\numberline {4.5}Java}{23}{section.4.5}
+\contentsline {section}{\numberline {4.6}JUnit}{23}{section.4.6}
+\contentsline {subsection}{JUnit en Android Studio}{24}{section*.33}
+\contentsline {section}{\numberline {4.7}Espresso}{24}{section.4.7}
+\contentsline {section}{\numberline {4.8}Git}{25}{section.4.8}
+\contentsline {subsection}{Caracter\IeC {\'\i }sticas}{25}{section*.34}
+\contentsline {section}{\numberline {4.9}GitHub-Desktop}{26}{section.4.9}
+\contentsline {section}{\numberline {4.10}LaTeX}{27}{section.4.10}
+\contentsline {section}{\numberline {4.11}Texmaker}{27}{section.4.11}
+\contentsline {section}{\numberline {4.12}Photoshop CC 2017}{27}{section.4.12}
+\contentsline {chapter}{Aspectos relevantes del desarrollo del proyecto}{29}{chapter*.35}
+\contentsline {section}{\numberline {5.1}Formaci\IeC {\'o}n}{29}{section.5.1}
+\contentsline {section}{\numberline {5.2}Ciclo de vida del proyecto}{30}{section.5.2}
+\contentsline {section}{\numberline {5.3}Decisiones T\IeC {\'e}cnicas}{31}{section.5.3}
+\contentsline {subsection}{Nuevo Proyecto}{31}{section*.36}
+\contentsline {subsection}{Splash Screen}{33}{section*.37}
+\contentsline {subsection}{Perfil-Registro}{34}{section*.38}
+\contentsline {subsection}{Men\IeC {\'u} Principal}{36}{section*.39}
+\contentsline {subsection}{Carbohidratos}{37}{section*.40}
+\contentsline {subsection}{Listas de Ingestas y Detalles de la lista}{39}{section*.41}
+\contentsline {subsection}{Ajustes}{40}{section*.42}
+\contentsline {subsection}{Otras decisiones}{42}{section*.43}
+\contentsline {chapter}{Trabajos relacionados}{47}{chapter*.44}
+\contentsline {chapter}{Conclusiones y L\IeC {\'\i }neas de trabajo futuras}{49}{chapter*.45}
+\contentsline {chapter}{Bibliograf\'{\i }a}{51}{chapter*.46}

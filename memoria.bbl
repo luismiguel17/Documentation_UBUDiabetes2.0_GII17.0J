@@ -104,6 +104,12 @@ Wikipedia.
 \newblock Glúcido --- wikipedia{,} la enciclopedia libre, 2018.
 \newblock [Internet; descargado 26-abril-2018].
 
+\bibitem{wiki:ipc}
+Wikipedia.
+\newblock Interacción persona-computadora --- wikipedia{,} la enciclopedia
+  libre, 2018.
+\newblock [Internet; descargado 7-junio-2018].
+
 \bibitem{wiki:java}
 Wikipedia.
 \newblock Java (lenguaje de programación) --- wikipedia{,} la enciclopedia
@@ -114,5 +120,11 @@ Wikipedia.
 Wikipedia.
 \newblock Latex --- wikipedia{,} la enciclopedia libre, 2018.
 \newblock [Internet; descargado 21-mayo-2018].
+
+\bibitem{wiki:resisinsu}
+Wikipedia.
+\newblock Resistencia a la insulina --- wikipedia{,} la enciclopedia libre,
+  2018.
+\newblock [Internet; descargado 26-abril-2018].
 
 \end{thebibliography}

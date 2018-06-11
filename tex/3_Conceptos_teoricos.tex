@@ -12,7 +12,7 @@ A continuación se explicarán aquellos conceptos teóricos en los que la versi�
 
 \subsection{Hidratos de Carbono}
 Los hidratos de carbono o carbohidratos se definen como biomoléculas compuestas por carbono, hidrogeno y oxígeno, cuyas principales funciones en los seres vivos son el brindar energía inmediata y estructural~\cite{wiki:carbs}.
-El \textbf{recuento de carbohidratos} es esencial para el cálculo de bolo corrector. ya que ayuda al usuario a controlar la glucosa en la sangre. Si se consigue in equilibrio adecuado entre carbohidratos ingeridos e insulina, el nivel de glucosa en la sangre se mantendrá dentro de los niveles deseados \cite{larab2015}.
+El \textbf{recuento de carbohidratos} es esencial para el cálculo de bolo corrector. ya que ayuda al usuario a controlar la glucosa en la sangre. Si se consigue el equilibrio adecuado entre carbohidratos ingeridos e insulina, el nivel de glucosa en la sangre se mantendrá dentro de los niveles deseados \cite{larab2015}.
 Para el cálculo de Grs de HC (Hidratos de Carbono) el usuario deberá:
 
 \begin{itemize}
@@ -22,8 +22,8 @@ Para el cálculo de Grs de HC (Hidratos de Carbono) el usuario deberá:
 \end{itemize}
 \subsection{Sensibilidad a la insulina}
 En la Diabetes, la sensibilidad a la insulina se entiende por el valor de glucemia en mg/dl que se consigue reducir al administrar una unidad de análogo de insulina de acción rápida.
-Así mismo, se debe tener en cuenta que existen usuarios con \textbf{resistencia a la insulina}, es decir, que presentan una condición en la cual los tejidos presentan una respuesta disminuida para disponer de la glucosa circulante ante la acción de la insulina; en especial el hígado, el músculo esquelético, el tejido adiposo y el cerebro. Esta alteración en conjunto con la deficiencia de producción de insulina por el páncreas puede conducir después de algún tiempo al desarrollo de una diabetes mellitus tipo 2~\cite{resistenciaIns}.
-Por el contrario, existen usuarios con una mayor sensibilidad a la insulina. Es por esto por lo que Bruno Martín Gómez señala en su TFG~\cite{bruno2017} en el apartado ``Recomendaciones para la versión UBUdiabetes 2.0.'', que se deberían tener en cuenta los decimales en las unidades de insulina, ya que usuarios con mucha sensibilidad a la insulina, media unidad puede ser determinante.
+Así mismo, se debe tener en cuenta que existen usuarios con \textbf{resistencia a la insulina}, es decir, que presentan una condición en la cual los tejidos presentan una respuesta disminuida para disponer de la glucosa circulante ante la acción de la insulina; en especial el hígado, el músculo esquelético, el tejido adiposo y el cerebro. Esta alteración en conjunto con la deficiencia de producción de insulina por el páncreas puede conducir después de algún tiempo al desarrollo de una \textit{diabetes mellitus} tipo 2~\cite{wiki:resisinsu}.
+Por el contrario, existen usuarios con una mayor sensibilidad a la insulina. Es por esto por lo que Bruno Martín Gómez señala en su TFG~\cite{bruno2017} en el apartado ``Recomendaciones para la versión UBUDiabetes 2.0.'', que se deberían tener en cuenta los decimales en las unidades de insulina, ya que usuarios con mucha sensibilidad a la insulina, media unidad puede ser determinante.
 
 \subsection{Insulina residual}
 Toda insulina tiene un \textbf{inicio de efecto} que es el periodo desde la inyección de la misma hasta que empieza a funcionar. Un \textbf{máximo efecto} o pico que es el periodo donde existe más efecto insulínico, debe coincidir con la máxima concentración de hidratos de carbono en el organismo, y un \textbf{fin de efecto} que es la \textbf{\textit{insulina activa residual}} tras el fin del pico de acción.
@@ -40,12 +40,40 @@ La grasa y fibra tienden a reducir el GI de un alimento. Como regla general, mie
 \end{itemize}
 
 \section{Aplicación Móvil}
-Para comprender como funciona la aplicación UbuDiabetes2.0 primero debemos explicar en que consiste una \textit{Aplicación móvil o App}.El resto de los conceptos comunes a la versión anterior pueden consultarse en las memorias de los proyectos de Mario López Jiménez~\cite{mario2016} y Lara Bartolomé Casado~\cite{larab2015}.
+Para comprender como funciona la aplicación UbuDiabetes2.0 primero debemos explicar en que consiste una \textit{Aplicación móvil o App}. El resto de los conceptos comunes a la versión anterior pueden consultarse en las memorias de los proyectos de Mario López Jiménez~\cite{mario2016} y Lara Bartolomé Casado~\cite{larab2015}.
 
 Una app es una aplicación informática diseñada para ser ejecutada en teléfonos inteligentes, tabletas y otros dispositivos móviles. Las aplicaciones permiten al usuario efectuar un conjunto de tareas de cualquier tipo: profesional, de ocio, educativas, de acceso a servicios, etc., facilitando las gestiones o actividades a desarrollar~\cite{wiki:app}.
 
-\subsection{UBUDiabtes 2.0}
+\subsection{Testing en aplicaciones móviles}
+Probar una aplicación es una parte integral del proceso de desarrollo de la aplicación. Al ejecutar las pruebas en la aplicación consistentemente, se puede verificar la corrección, el funcionamiento funcional y la usabilidad de la aplicación antes de lanzarla públicamente. Las pruebas ofrecen las siguientes ventajas~\cite{androiddeveloper}
+\begin{itemize}
+	\item Rápida retroalimentación sobre fallos.
+	\item Detección temprana de fallos en el ciclo de desarrollo.
+	\item Refactorización de código más segura, lo que le permite optimizar el código sin preocuparse por las regresiones.
+	\item Velocidad de desarrollo estable, lo que ayuda a minimizar la deuda técnica.
+\end{itemize}
+\subsubsection{Fundamentos del Testing}
+Los usuarios interactúan con su aplicación en una variedad de niveles, desde presionar un botón ``Enviar'' hasta descargar información en su dispositivo. En consecuencia, debe probar una variedad de casos de uso e interacciones a medida que desarrolla iterativamente su aplicación.
+A medida que una aplicación se expande, puede que sea necesario buscar datos de un servidor, interactuar con los sensores del dispositivo, acceder al almacenamiento local o representar interfaces de usuario complejas. La versatilidad de una aplicación exige una estrategia de prueba integral. Al desarrollar una característica de forma iterativa, comienza escribiendo una nueva prueba o agregando casos y aserciones a una prueba de unidad existente. La prueba falla al principio porque la característica aún no está implementada. Es importante considerar las unidades de responsabilidad que surgen a medida que diseña la nueva característica. Para cada unidad, escribe una prueba de unidad correspondiente. Las pruebas de su unidad casi agotan todas las interacciones posibles con la unidad, incluidas las interacciones estándar, las entradas no válidas y los casos en que los recursos no están disponibles.
+\imagen{desarrolloiterativobasadoenpruebas}{Flujo de trabajo-Testing}{0.7}
+El flujo de trabajo completo, como se muestra en la Figura~\ref{fig:desarrolloiterativobasadoenpruebas}, contiene una serie de ciclos iterativos anidados en los que un ciclo largo, lento y controlado por la interfaz de usuario prueba la integración de las unidades de código. El programador prueba las unidades con ciclos de desarrollo más cortos y más rápidos. Este conjunto de ciclos continúa hasta que la aplicación satisfaga todos los casos de uso.
+
+\subsection{Interacción Hombre-Máquina}
+Esta disciplina se enfoca en el estudio de la interacción entre las personas y los sistemas computacionales. Su objetivo principal es mejorar esta interacción, haciendo que los sistemas computacionales sean más usables, de manera que aumente la productividad de las personas al trabajar con ellos
+\subsubsection{Principios del diseño}
+Cuando evaluamos una interfaz, o diseñamos una nueva, se tienen que tener en cuenta los siguientes principios de diseño experimental~\cite{wiki:ipc}:
+\begin{itemize}
+	\item \textbf{Fijar quien será el usuario/s y su/s tarea/s}. Se tiene que establecer el número de usuarios necesarios para llevar a cabo las tareas y determinar cuáles serían las personas indicadas. Una persona que nunca lo ha utilizado y no la utilizará en el futuro, no sería un usuario válido.
+	\item \textbf{Medidas empíricas}. Sería de gran utilidad llevar a cabo un testeo de la interfaz con usuarios reales, en la situación en que se utilizaría. No podemos olvidar que los resultados se verán alterados si la situación no es real. Habría que establecer una serie de especificaciones cuantitativas, que serán de gran utilidad, como podrían ser el número de usuarios necesarios para realizar una tarea, el tiempo necesario para completarla y el número de errores que se producen durante su realización.
+	\item \textbf{Diseño iterativo}. Una vez determinados los usuarios, las tareas y las medidas empíricas se vuelve a empezar: se modifica el diseño, se testea, se analizan los resultados y se repite de nuevo el proceso hasta obtener la interfaz deseada. 
+\end{itemize}
+\subsection{UBUDiabetes 2.0}
 UbuDiabetes es una aplicación dirigida a diabéticos tipo 1 cuya función principal es ayudarlos a calcular con eficacia el bolo corrector de insulina, disminuyendo el riesgo de hipoglucemia. 
-Otras funcionalidades que presenta UBUDiabetes son : \textit{Historial de Glucemias}, \textit{Registro de Glucemias}, \textit{Consultar Ingestas}. Estas funcionalidades se explicaran más adelante.
+Otras funcionalidades que presenta UBUDiabetes son : 
+\begin{itemize}
+	\item \textbf{Historial de Glucemias}: Gráfico con los valores de las glucemias registradas por el usuario. Muestra los valores de la última semana para las glucemias registradas \textsc{Antes de desayunar}, \textsc{Después de comer} y \textsc{Antes de cenar}.
+	\item \textbf{Registro de Glucemias}: Guarda en la base de datos local de la aplicación los valores de las glucemias registradas por el usuario.
+	\item \textbf{Consultar Ingestas}: Muestra los registros de todos los cálculos del bolo corrector que se han llevado a cabo por el usuario.
+\end{itemize}
 
 
