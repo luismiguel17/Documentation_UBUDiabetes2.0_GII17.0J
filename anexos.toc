@@ -1,0 +1,54 @@
+\babel@toc {spanish}{}
+\babel@toc {spanish}{}
+\contentsline {chapter}{\'{I}ndice general}{\es@scroman {i}}{section*.1}
+\contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {iii}}{section*.2}
+\contentsline {chapter}{\'{I}ndice de tablas}{\es@scroman {iv}}{section*.3}
+\contentsline {appendix}{\chapternumberline {A}Plan de Proyecto Software}{1}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Introducci\IeC {\'o}n}{1}{section.Alph1.1}
+\contentsline {section}{\numberline {A.2}Planificaci\IeC {\'o}n temporal}{1}{section.Alph1.2}
+\contentsline {subsection}{Sprint 0 - Febrero 19-2018 - Marzo 01-2018}{2}{section*.4}
+\contentsline {subsection}{Sprint 1 - Marzo 8-2018 - Marzo 14-2018}{2}{section*.5}
+\contentsline {subsection}{Sprint 2 - Marzo 14-2018 - Marzo 21-2018}{3}{section*.6}
+\contentsline {subsection}{Sprint 3 - Marzo 15-2018 - Marzo 22-2018}{4}{section*.7}
+\contentsline {subsection}{Sprint 4 - Marzo 22-2018 - Marzo 28-2018}{5}{section*.8}
+\contentsline {subsection}{Sprint 5 - Marzo 28-2018 - Abril 11-2018}{6}{section*.9}
+\contentsline {subsection}{Sprint 6 - Abril 12-2018 - Abril 19-2018}{7}{section*.10}
+\contentsline {subsection}{Sprint 7 - Abril 19-2018 - Abril 26-2018}{8}{section*.11}
+\contentsline {subsection}{Sprint 8 - Abril 26-2018 - Mayo 10-2018}{9}{section*.12}
+\contentsline {subsection}{Sprint 9 - Mayo 10-2018 - Mayo 18-2018}{10}{section*.13}
+\contentsline {subsection}{Sprint 10 - Mayo 18-2018 - Mayo 25-2018}{11}{section*.14}
+\contentsline {subsection}{Sprint 10 - Mayo 18-2018 - Junio 07-2018}{12}{section*.15}
+\contentsline {section}{\numberline {A.3}Estudio de viabilidad}{13}{section.Alph1.3}
+\contentsline {subsection}{Viabilidad econ\IeC {\'o}mica}{13}{section*.16}
+\contentsline {subsubsection}{Coste de personal}{13}{section*.17}
+\contentsline {subsubsection}{Coste de hardware}{14}{section*.18}
+\contentsline {subsubsection}{Coste de software}{14}{section*.19}
+\contentsline {subsubsection}{Coste total}{14}{section*.20}
+\contentsline {subsection}{Viabilidad legal}{15}{section*.21}
+\contentsline {subsubsection}{Apache License V2.0}{15}{section*.22}
+\contentsline {appendix}{\chapternumberline {B}Especificaci\IeC {\'o}n de Requisitos}{17}{appendix.Alph2}
+\contentsline {section}{\numberline {B.1}Introducci\IeC {\'o}n}{17}{section.Alph2.1}
+\contentsline {section}{\numberline {B.2}Objetivos generales}{17}{section.Alph2.2}
+\contentsline {section}{\numberline {B.3}Catalogo de requisitos}{17}{section.Alph2.3}
+\contentsline {subsection}{Requisitos funcionales}{18}{section*.23}
+\contentsline {subsection}{Requisitos no funcionales}{19}{section*.24}
+\contentsline {section}{\numberline {B.4}Especificaci\IeC {\'o}n de requisitos}{20}{section.Alph2.4}
+\contentsline {subsection}{Actores}{20}{section*.25}
+\contentsline {subsection}{Diagrama de casos de uso}{21}{section*.26}
+\contentsline {appendix}{\chapternumberline {C}Especificaci\IeC {\'o}n de dise\IeC {\~n}o}{29}{appendix.Alph3}
+\contentsline {section}{\numberline {C.1}Introducci\IeC {\'o}n}{29}{section.Alph3.1}
+\contentsline {section}{\numberline {C.2}Dise\IeC {\~n}o de datos}{29}{section.Alph3.2}
+\contentsline {section}{\numberline {C.3}Dise\IeC {\~n}o procedimental}{29}{section.Alph3.3}
+\contentsline {section}{\numberline {C.4}Dise\IeC {\~n}o arquitect\IeC {\'o}nico}{29}{section.Alph3.4}
+\contentsline {appendix}{\chapternumberline {D}Documentaci\IeC {\'o}n t\IeC {\'e}cnica de programaci\IeC {\'o}n}{31}{appendix.Alph4}
+\contentsline {section}{\numberline {D.1}Introducci\IeC {\'o}n}{31}{section.Alph4.1}
+\contentsline {section}{\numberline {D.2}Estructura de directorios}{31}{section.Alph4.2}
+\contentsline {section}{\numberline {D.3}Manual del programador}{31}{section.Alph4.3}
+\contentsline {section}{\numberline {D.4}Compilaci\IeC {\'o}n, instalaci\IeC {\'o}n y ejecuci\IeC {\'o}n del proyecto}{31}{section.Alph4.4}
+\contentsline {section}{\numberline {D.5}Pruebas del sistema}{31}{section.Alph4.5}
+\contentsline {appendix}{\chapternumberline {E}Documentaci\IeC {\'o}n de usuario}{33}{appendix.Alph5}
+\contentsline {section}{\numberline {E.1}Introducci\IeC {\'o}n}{33}{section.Alph5.1}
+\contentsline {section}{\numberline {E.2}Requisitos de usuarios}{33}{section.Alph5.2}
+\contentsline {section}{\numberline {E.3}Instalaci\IeC {\'o}n}{33}{section.Alph5.3}
+\contentsline {section}{\numberline {E.4}Manual del usuario}{33}{section.Alph5.4}
+\contentsline {chapter}{Bibliograf\'{\i }a}{35}{appendix*.27}

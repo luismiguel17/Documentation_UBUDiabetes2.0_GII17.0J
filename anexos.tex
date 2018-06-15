@@ -8,6 +8,9 @@
 \usepackage{lmodern} % scalable font
 \usepackage{microtype}
 \usepackage{placeins}
+\usepackage[inline]{enumitem}
+\usepackage{listings}
+\usepackage{lscape}
 
 \RequirePackage{booktabs}
 \RequirePackage[table]{xcolor}
@@ -23,6 +26,13 @@
 % Ecuaciones
 \usepackage{amsmath}
 
+%Para las ecuaciones en formato SI
+\usepackage{eurosym}
+\usepackage{amstext} % for \text
+\DeclareRobustCommand{\officialeuro}{%
+	\ifmmode\expandafter\text\fi
+	{\fontencoding{U}\fontfamily{eurosym}\selectfont e}}
+	
 % Rutas de fichero / paquete
 \newcommand{\ruta}[1]{{\sffamily #1}}
 
@@ -32,10 +42,10 @@
 
 % Imagenes
 \usepackage{graphicx}
-\newcommand{\imagen}[2]{
-	\begin{figure}[!h]
+\newcommand{\imagen}[3]{
+	\begin{figure}[htbp]
 		\centering
-		\includegraphics[width=0.9\textwidth]{#1}
+		\includegraphics[width=#3\textwidth]{#1}
 		\caption{#2}\label{fig:#1}
 	\end{figure}
 	\FloatBarrier
@@ -109,6 +119,7 @@
   \end{center}
  \end{table}
 }
+
 
 %
 %Para el float H de tablaSmallSinColores
@@ -275,8 +286,26 @@
   \end{center}
 }
 
+\newcommand{\enumeratecompacto}[1]{
+	\begin{enumerate*}[label=\arabic*. ,itemjoin={\newline}]
+		#1
+	\end{enumerate*}
+}
 
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
 
+\newcommand{\tablaAncho}[4]{%
+	\begin{table}[]
+		\centering
+		\begin{tabularx}{\textwidth}{#2}
+			\toprule
+			#4
+			\bottomrule
+		\end{tabularx}
+		\caption{#1}
+		\label{tabla:#3}
+	\end{table}
+}
 
 \graphicspath{ {./img/} }
 
@@ -345,9 +374,9 @@
 
 
 % Datos de portada
-\title{título del TFG \\Documentación Técnica}
-\author{nombre alumno}
-\tutor{nombre tutor}
+\title{UBUDiabetes 2.0\\Documentación Técnica}
+\author{Luis Miguel Inapanta Oyana}
+\tutor{Raúl Marticorena Sanchéz}
 \date{\today}
 
 \begin{document}

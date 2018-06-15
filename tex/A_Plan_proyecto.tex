@@ -1,13 +1,145 @@
 \apendice{Plan de Proyecto Software}
 
 \section{Introducción}
+En este apartado se pretende estimar el trabajo, el tiempo y los costes necesarios para la realización del proyecto.
+Cabe mencionar que se trabajaron con 3 repositorios:
+\begin{itemize}
+	\item UbuDiabetes2.0\_GII\_14b: Repositorio inicial de partida. En él se realizaron las primeras configuraciones y ediciones para el nuevo proyecto.
+	\item UBUDiabtes2.0\_GII17.0J: Repositorio nuevo creado para continuar con el proyecto. Se puede consultar más detalles del motivo de la creación de un nuevo repositorio para el proyecto en la sección \textbf{Aspecto relevantes del desarrollo del proyecto}.
+	\item Documentation\_UBUDiabtes2.0\_GII17.0J: Repositorio creado únicamente para la realización de la documentación.
+\end{itemize}
+
+
 
 \section{Planificación temporal}
+A continuación, se detallarán los diferentes objetivos que se han establecido para cada \textit{sprint} y, a su vez, el progreso obtenido en los mismos. Para ello se ha utilizado una metodología ágil denominada \textit{SCRUM}~\cite{schwaber2002agile}. Se empleará a su vez el gestor de tareas provisto por GitHub y se generarán gráficos \textit{burndown} para el seguimiento de los \textit{sprint}, los cuales son provistos por la extensión \textit{ZenHub}.
+\subsection{Sprint 0 - Febrero 19-2018 - Marzo 01-2018}
+En este sprint se pretenden instalar las herramientas necesarias para la realización del proyecto, así como la lectura y comprensión de las memorias y anexos de los proyectos previos relacionados con el mismo. A su vez se pretende ejecutar la aplicación en un emulador para comprobar su correcto funcionamiento.
+En este sprint se crearon algunas tareas que, como se puede observar quedaron sin finalizar ya que, como se mencionó en la sección \textbf{Aspectos relevantes del desarrollo del proyecto}, se creó un nuevo proyecto en el que se continúa con la realización del proyecto.
+Podemos observar el progreso del \textit{sprint} en la figura~\ref{fig:sprint-0}
+\imagen{sprint-0}{Progreso en el \textit{sprint} 0.}{0.9}
+\subsection{Sprint 1 - Marzo 8-2018 - Marzo 14-2018}
+En este \textit{sprint} se pretende leer la documentación relacionada con el \textit{testing} con \textit{Espresso} y empezar con las configuraciones necesarias para la creación de los primeros test instrumentados.
+Podemos observar el progreso del \textit{sprint} en la figura~\ref{fig:sprint-1}
+\imagen{sprint-1}{Progreso en el \textit{sprint} 1.}{0.9}
+\subsection{Sprint 2 - Marzo 14-2018 - Marzo 21-2018}
+En este \textit{sprint} se pretende entender el funcionamiento de la herramienta \textit{Texmaker} para poder empezar a realizar las primeras modificaciones para la documentación del proyecto.
+Así mismo, se pretende crear un nuevo proyecto en Android Studio, con su repositorio en \textit{GitHub}, con las configuraciones necesarias para poder continuar con el proyecto.
+Podemos observar el progreso del \textit{sprint} en la figura~\ref{fig:sprint-2}
+\imagen{sprint-2}{Progreso en el \textit{sprint} 2.}{0.9}
+\subsection{Sprint 3 - Marzo 15-2018 - Marzo 22-2018}
+Este \textit{sprint} se realizó en la misma semana del \textit{sprint} anterior, pero en el nuevo repositorio creado. En él se pretende migrar todos los datos de UBUDiabetes 1.0 al nuevo proyecto creado, realizando las configuraciones y modificaciones necesarias para la correcta compilación y ejecución del proyecto ya que este nuevo proyecto se realizó en una nueva versión de Android Studio, lo que requería configuraciones diferentes a las del proyecto anterior, por ejemplo, nuevas librerías, , diferentes dependencias de Android, contenedores diferentes en los diseños, etc. Así mismo se pretende seguir con la lectura de la documentación relacionada al \textit{testing}.
+Podemos observar el progreso del \textit{sprint} en la figura~\ref{fig:sprint-3}
+\imagen{sprint-3}{Progreso en el \textit{sprint} 3.}{0.9}
+\subsection{Sprint 4 - Marzo 22-2018 - Marzo 28-2018}
+En este \textit{sprint} se pretende realizar y ejecutar los primeros test instrumentados con \textit{Espresso}.
+Podemos observar el progreso del \textit{sprint} en la figura~\ref{fig:sprint-4}
+\imagen{sprint-4}{Progreso en el \textit{sprint} 4.}{0.9}
+\subsection{Sprint 5 - Marzo 28-2018 - Abril 11-2018}
+En este \textit{sprint} se pretende crear las primeras líneas para la documentación del proyecto, crear un nuevo diseño para la pantalla ``Perfil-Registro'' y crear un buscador de alimentos para la pantalla ``Carbohidratos''.
+Podemos observar el progreso del \textit{sprint} en la figura~\ref{fig:sprint-5}
+\imagen{sprint-5}{Progreso en el \textit{sprint} 5.}{0.9}
+\subsection{Sprint 6 - Abril 12-2018 - Abril 19-2018}
+En este \textit{sprint} se realizaron varias tareas, la mayoría relacionadas con modificaciones en la interfaz gráfica del usuario:
+\begin{itemize}
+	\item Empezar con la configuración y ejecución para \textit{sonarQube}.
+	\item Introducir en la tabla ``alimentos'' el índice glucémico de cada alimento.
+	\item Mostrar en la lista de alimentos ingeridos por el usuario, la categoría según el índice glucémico de cada alimento.
+	\item Buscar e implementar una manera de guardar en un registro los alimentos ingeridos por el usuario con su Bolo corrector final.
+	\item Añadir opción de configuración (En el Perfil) de número de decimales a devolver en el cálculo del bolo corrector.
+	\item Implementar la selección y eliminación de los \textit{items} de la lista de ingesta.
+	\item Cambiar la forma de almacenamiento de las raciones en gramos para cada alimento.
+	\item Implementar la selección de una imagen de galería para el Perfil del usuario.
+\end{itemize}
+Podemos observar el progreso del \textit{sprint} en la figura~\ref{fig:sprint-6}
+\imagen{sprint-6}{Progreso en el \textit{sprint} 6.}{0.9}
+\subsection{Sprint 7 - Abril 19-2018 - Abril 26-2018}
+En este \textit{sprint} se pretende continuar con la memoria del proyecto y realizar nuevas modificaciones para la interfaz gráfica del usuario. Las tareas para este \textit{sprint} fueron:
+\begin{itemize}
+	\item Asignar permisos de uso de la cámara y permisos de escritura en la tarjeta SD para Android 6.0 y superior.
+	\item Cambiar la carga de los datos de la tabla ``Alimentos'' de la pantalla ``Carbohidratos'' a la pantalla ``SplashScreen''.
+	\item Implementar orden inverso para las listas.
+	\item Mostrar el sumatorio de los Hidratos de Carbono y del Bolo corrector en la pantalla ``Carbohidratos''.
+	\item Continuar con la documentación para la memoria del proyecto.
+\end{itemize}
+Podemos observar el progreso del \textit{sprint} en la figura~\ref{fig:sprint-7}
+\imagen{sprint-7}{Progreso en el \textit{sprint} 7.}{0.9}
+\subsection{Sprint 8 - Abril 26-2018 - Mayo 10-2018}
+En este \textit{sprint} se pretende continuar con la realización y/o modificación de nuevos test tanto unitarios como con \textit{Espresso}. A su vez, se pretende seguir con la documentación, pero en un nuevo repositorio creado solo para tal.
+Por otro lado, se continuó también con la modificación de la interfaz gráfica del usuario.
+En este \textit{sprint} se creó la primera \textbf{Apk} del proyecto en una \textit{reléase}.
+Podemos observar el progreso del \textit{sprint} en la figura~\ref{fig:sprint-8}
+\imagen{sprint-8}{Progreso en el \textit{sprint} 8.}{0.9}
+\subsection{Sprint 9 - Mayo 10-2018 - Mayo 18-2018}
+En este \textit{sprint} se pretende corregir pequeños detalles que se observaron que fallaban tras instalar la primera Apk creada en el \textit{sprint} anterior en un dispositivo móvil real.
+Tras corregir esos detalles y añadir nuevas modificaciones, se crearon dos nuevas versiones \textbf{Apk} para la aplicación. 
+Por otro lado, se corrigieron pequeños fallos en la memoria del proyecto.
+Podemos observar el progreso del \textit{sprint} en la figura~\ref{fig:sprint-9}
+\imagen{sprint-9}{Progreso en el \textit{sprint} 9.}{0.9}
+\subsection{Sprint 10 - Mayo 18-2018 - Mayo 25-2018}
+En este sprint se pretende seguir con la modificación de la interfaz grafica del usuario. 
+A su vez, se pretende crear una nueva estructura para los test unitarios. Se pretende separar en distintas clases los test que son precios/exactos, de los que tienen cierto margen de error. 
+Podemos observar el progreso del \textit{sprint} en la figura~\ref{fig:sprint-10}
+\imagen{sprint-10}{Progreso en el \textit{sprint} 10.}{0.9}
+\subsection{Sprint 10 - Mayo 18-2018 - Junio 07-2018}
+Este \textit{sprint} se realizó desde el repositorio creado para la documentación. En el se pretende continuar con la documentación del proyecto.
+Cabe mencionar que no he realizado una dedicación a tiempo completo a este \textit{sprint}, sino que ha sido una dedicación parcial. Esto es debido a que me encuentro cursando dos asignaturas al mismo tiempo, por lo tanto, este \textit{sprint} ha tenido una duración superior a los primeros ya que por estas fechas los alumnos tenemos cerca los exámenes finales.
+Podemos observar el progreso del \textit{sprint} en la figura~\ref{fig:sprint-11}
+\imagen{sprint-11}{Progreso en el \textit{sprint} 11.}{0.9}
 
+CONTINUAR CON EL RESTO DE SPRINT
 \section{Estudio de viabilidad}
-
+En esta sección vamos a realizar un estudio de viabilidad económica de nuestro proyecto y su viabilidad legal, dos aspectos importantes y relevantes.
 \subsection{Viabilidad económica}
+A continuación, analizaremos la viabilidad económica de nuestro proyecto detallando los costes que hubiera supuesto en un caso real, es decir,  en los diferentes niveles de una empresa.
+\subsubsection{Coste de personal}
+Los recursos humanos empleados en este proyecto han sido 2: el propio alumno quien realizó el proyecto y el tutor del mismo. Se puede estimar que el alumno ha empleado xxx horas (aun por estimar) a 10\euro{} la hora:
+\[10~{\mbox{\euro}} /\textsf{Hora}*xxx\textsf{Horas}=xxx~{\mbox{\euro}} \]
 
+Para calcular el coste de las reuniones con el tutor se tendrá en cuenta el numero de reuniones a lo largo del desarrollo del proyecto. En total fueron xxx reuniones de 1 hora cada una aproximadamente, lo que supondría:
+\[10~{\mbox{\euro}} /\textsf{Hora}*xxx\textsf{Horas}=xxxx ~{\mbox{\euro}} \]
+
+A esta cuantía debemos añadirle el valor que debería llevarse la Seguridad Social, lo cual ha sido obtenido a partir de\footnote{\url{http://www.seg-social.es/Internet_1/Trabajadores/CotizacionRecaudaci10777/Basesytiposdecotiza36537/index.htm}}:
+\begin{itemize}
+\item 1,55\%: Desempleo.
+\item 0,03\%: Formación profesional.
+\item 4,7\%: Contingencias comunes 
+\item Lo que hace un total de: 6,28%
+\end{itemize}
+Por lo que el total de costes de personal sería de:
+\[(xxxAlumno + xxxreuniones)~{\mbox{\euro}}*0.0628=xxx~{\mbox{\euro}}\]
+\subsubsection{Coste de hardware}
+Cabe mencionar que no se necesitó de ningún equipo informático adicional para la realización del proyecto. No obstante, se deberá calcular el coste del \textit{hardware} utilizado en el proyecto.
+En este caso al tratarse de una aplicación móvil, únicamente se necesitó un ordenador portátil cuyo valor se estima en 600\euro{} y suponiendo una vida útil de 7 años y xxx semanas de proyecto, se tiene un coste de amortización de xxx\euro{} aproximadamente.
+\[ \frac{600\euro}{7 \ a\textit{ñ}os} * \frac{1 \ a\textit{ñ}o}{52 \ semanas} * xxx \ semanas \approx xxx\euro \]
+
+\subsubsection{Coste de software}
+Este proyecto es una segunda versión y se ha desarrollado empleando plataformas \textit{software} libre para todo lo imprescindible, por lo que el coste \textit{software} es nulo.
+\subsubsection{Coste total}
+Así, el coste total del proyecto ha sido:
+\begin{table}[]
+\centering
+\caption{Costes totales}
+\label{tab:costes}
+\rowcolors {2}{gray!35}{}
+%\resizebox{0.5\textwidth}{!}{
+\begin{tabular}{p{4cm} p{2cm}}
+\toprule
+Costes & Importe \\ \midrule
+Personal         & xxx \euro{}   \\ 
+Seguridad Social & xxx \euro{} \\ 
+Material         & xxx \euro{}   \\ 
+Totales          & xxx \euro{} \\ \bottomrule
+\end{tabular}
+%}
+\end{table}
 \subsection{Viabilidad legal}
+En este apartado pasamos a analizar la viabilidad legal del proyecto. Para ello vamos a describir las licencias de elementos o librerías que se hayan podido utilizar.
 
+El primer caso sujeto a estudio es el de la librería \textbf{Hitomis/CircleMenu}. Esta librería se distribuye bajo la licencia Apache License v2.0.
+
+El segundo caso sujeto a estudio es el de la librería \textbf{(nueva librería para las gráficas)}. Esta Esta librería se distribuye bajo la licencia xxx.
+\subsubsection{Apache License V2.0}
+La licencia \textit{Apache} (Apache License o Apache Software License para versiones anteriores a 2.0) es una licencia de software libre permisiva creada por la \textit{Apache Software Foundation (ASF)}. La licencia \textit{Apache} (con versiones 1.0, 1.1 y 2.0) requiere la conservación del aviso de derecho de autor y el descargo de responsabilidad, pero no es una licencia copyleft, ya que no requiere la redistribución del código fuente cuando se distribuyen versiones modificadas.
+Al igual que otras licencias de software libre, todo el software producido por la A\textit{ASF} o cualquiera de sus proyectos está desarrollado bajo los términos de esta licencia, es decir, la licencia permite al usuario del software de la libertad de usar el software para cualquier propósito, para distribuirlo, modificarlo y distribuir versiones modificadas del software, bajo los términos de la licencia, sin preocuparse de las regalías~\cite{wiki:apachelicense}.
 

@@ -1,11 +1,272 @@
 \apendice{Especificación de Requisitos}
 
 \section{Introducción}
-
+En esta sección se expondrán los distintos objetivos que la aplicación debe lograr, así como los requisitos que debe cumplir.
 \section{Objetivos generales}
-
+Como objetivos generales en este proyecto tenemos:
+\begin{itemize}
+	\item Crear y/o mejorar la interfaz gráfica del usuario.
+	\item Mostrar todos los registros diarios del usuario.
+	\item Facilitar la navegabilidad durante el uso de la aplicación.
+	\item Corregir los métodos utilizados para el cálculo del bolo corrector.
+	\item Incluir pruebas unitarias e instrumentales.
+\end{itemize}
 \section{Catalogo de requisitos}
-
+A continuación, listaremos el conjunto de requisitos funcionales extraídos a partir de los objetivos generales del proyecto.
+\subsection{Requisitos funcionales}
+Los requisitos funcionales se han obtenido a partir de un diagrama de casos de uso hecho desde cero, aunque ciertos requisitos coinciden con los de la versión anterior, por lo que serán iguales.
+\begin{itemize}
+	\item \textbf{RF-1 Gestión del perfil de usuario}: la aplicación debe ser capaz de registrar y modificar los datos personales y médicos del usuario.
+		\begin{itemize}
+			\item \textbf{RF-1.1 Comprobar datos}: El sistema deberá comprobar que se han rellenado todos los campos de registro.
+			\item \textbf{RF-1.2 Validar valores de Glucemia}: El sistema debe comprobar que se han introducido los valores de glucemia máximo y mínimo dentro de unos margenes establecidos.
+			\item \textbf{RF-1.3 Registrar datos del perfil}: El sistema deberá registrar los datos del perfil del usuario.
+			\item \textbf{RF-1.4 Modificar datos del perfil}: El sistema deberá permitir la modificación de los datos del perfil del usuario.
+		\end{itemize}
+	\item \textbf{RF-2 Cálculo del bolo corrector}: El usuario podrá calcular las unidades de insulina que necesita a partir de su nivel de glucemia.
+		\begin{itemize}
+			\item RF-2.1: El sistema deberá registrar el nivel de glucemia haciendo uso de \textit{Gestión de glucemias}.
+			\item \textbf{RF-2.2 Cantidad de alimento}: El sistema deberá permitir al usuario introducir y/o eliminar los gramos de uno o más alimentos a consumir. Así mismo, el sistema deberá registrar dichos alimentos con sus respectivas cantidades.
+			\item \textbf{RF-2.3 Bolo corrector}: El sistema deberá mostrar por pantalla el resultado del bolo corrector obtenido a partir de los datos introducidos.
+		\end{itemize}
+	\item \textbf{RF-3 Gestión de glucemias}: El usuario podrá llevar un registro de sus niveles de glucemia en diferentes etapas del día, así como registrar incidencias en los casos en que corresponda.
+		\begin{itemize}
+			\item \textbf{RF-3.1 Registrar niveles de glucemia}: El sistema deberá registrar en una base de datos local los valores de glucemia introducidos por el usuario.
+			\item \textbf{RF-3.2 Comprobar límites}: El sistema deberá comprobar si el valor introducido se encuentra dentro de los límites mínimo-máximo introducidos por el usuario en su perfil.
+				\begin{itemize}
+					\item \textbf{RF-3.2.1 Registrar incidencia}: Si el valor introducido esta fuera de los límites establecidos, el sistema permitirá al usuario registrar una incidencia que podrá tener opcionalmente una observación por parte del usuario.
+				\end{itemize}
+		\end{itemize}
+	\item \textbf{RF-4 Gestión del historial}: El usuario podrá comprobar de manera gráfica sus niveles de glucemia registrados.
+	\item \textbf{RF-5 Gestión de registros diarios}: El usuario podrá comprobar todos sus registros de manera simplificada o detallada.
+		\begin{itemize}
+			\item \textbf{RF-5.1 Resumen registros}: El sistema deberá mostrar por pantalla los registros diarios del usuario:
+				\begin{itemize}
+					\item Id: Identificador del registro.
+					\item Fecha:  Momento del registro.
+					\item HC: Sumatorio de hidratos de carbono en el cálculo del bolo corrector.
+					\item Bolo corrector: Unidades de insulina obtenidas en el cálculo del bolo corrector.
+				\end{itemize}
+			\item \textbf{RF-5.2 Detalle registros}: El sistema deberá mostrar por pantalla los detalles de un registro previamente seleccionado por el usuario:
+			\begin{itemize}
+					\item Tipo: Categoría del alimento.
+					\item Alimento: Nombre del alimento consumido.
+					\item Cantidad: Gramos consumidos del alimento.
+					\item IG: Índice glucemico.
+				\end{itemize}
+		\end{itemize}
+	\item \textbf{RF-6 Gestión de ajustes}: El usuario podrá realizar pequeños ajustes en la aplicación.
+		\begin{itemize}
+			\item RF-6.1: El sistema deberá permitir configurar los datos del perfil del usuario haciendo uso de \textit{Gestión del perfil de usuario}.
+			\item \textbf{RF-6.1 Copia de seguridad}: El sistema deberá permitir realizar copias de seguridad de los datos registrados por el usuario.
+			\item \textbf{RF-6.1 Liberar espacio}: El sistema deberá permitir eliminar los datos registrados por el usuario.
+		\end{itemize}
+\end{itemize}
+\subsection{Requisitos no funcionales}
+Alguno de estos requisitos coinciden con los de la versión anterior. Aun así, mencionaremos todos para que quede más claro.
+\begin{itemize}
+	\item \textbf{RNF-1 Apariencia}: La representación de los datos deberá ser atractiva para el usuario.
+	\item \textbf{RNF-2 Usabilidad}: El conjunto de elementos visuales de la interfaz deben ser claros e intuitivos, permitiendo un rápido aprendizaje.
+	\item \textbf{RNF-3  Mantenibilidad, Portabilidad y Escalabilidad}: La aplicación debe desarrollarse siguiendo alguna técnica que permita facilidad de mantenimiento e incorporación de nuevas características, así como corrección de errores.
+	\item \textbf{RNF-4 Eficiencia}: La aplicación debe ser capaz operar adecuadamente con los datos introducidos por el usuario.
+	\item \textbf{RNF-5 Seguridad}: La aplicación debe ser capaz de realizar copias de seguridad de los datos registrados por el usuario.
+	\item \textbf{RNF-6 Rendimiento}: La aplicación debe ser capaz de soportar el manejo de gran cantidad de datos durante su proceso.
+	\item \textbf{RNF-7 Testabilidad}: Capacidad de que la aplicación puede ser probada.
+\end{itemize}
 \section{Especificación de requisitos}
+\subsection{Actores}
+La aplicación \textbf{UBUDiabetes} está orientada a usuarios diabéticos del tipo I. En este caso los clientes de la aplicación son miembros del Área de enfermería (Grado de Enfermería) de la facultad de Ciencias de la Salud, como Diego Serrano Gómez y Jesús Puente Alcaraz, y Raúl Marticorena Sánchez, tutor del proyecto. Por lo tanto:
+\begin{itemize}
+	\item \textbf{Desarrollador}: Luis Miguel Inapanta Oyana.
+	\item \textbf{Clientes}: Diego Serrano Gómez, Jesús Puente Alcaraz, y Raúl Marticorena Sánchez.
+\end{itemize}
+\newpage
+\subsection{Diagrama de casos de uso}
+A continuación se mostrara el diagrama de casos de uso del proyecto.
+\imagen{Casos_de_uso_UBUDiabetes}{Diagrama general de casos de uso}{0.9}
 
+\tablaAncho
+{CU-1 Registrar datos de perfil}
+{p{2.9cm} X}
+{use-case-1}
+{	
+	\textbf{CU-1} & \textbf{Registrar datos de perfil} \\ \otoprule
+	\textbf{Versión} & 2.0 \\ \midrule
+	\textbf{Autor} & Luis Miguel Inapanta Oyana \\ \midrule
+	\textbf{Requisitos asociados} & \textbf{RF-1.1, RF-1.2, RF-1.3, RF-1.4} \\ \midrule
+	\textbf{Descripción} & Permite al usuario registrar sus datos, tanto personales como médicos. \\ \midrule
+	\textbf{Precondiciones} & 
+	\tabitem Consultar los datos relacionados con la diabetes con su médico.
+	\\ \midrule
+	\textbf{Acciones} & 
+	\enumeratecompacto{
+		\item El usuario rellena todos los campos del registro.
+		\item Se  cargan los datos de la tabla de alimentos de la federación española de la diabetes.
+		\item Se visualiza el menú principal.
+	}
+	\\ \midrule
+	\textbf{Postcondiciones} & Visualizar menú principal. \\ \midrule
+	\textbf{Excepciones} & No rellenar algún campo del registro\\ \midrule
+	\textbf{Importancia} & Muy Alta \\ 
+}
 
+\tablaAncho
+{CU-2 Registrar niveles de glucemia}
+{p{2.9cm} X}
+{use-case-2}
+{	
+	\textbf{CU-2} & \textbf{Registrar niveles de glucemia} \\ \otoprule
+	\textbf{Versión} & 2.0 \\ \midrule
+	\textbf{Autor} & Luis Miguel Inapanta Oyana \\ \midrule
+	\textbf{Requisitos asociados} & \textbf{RF-3.1, RF-3.2, RF-3.2.1}\\ \midrule
+	\textbf{Descripción} & Permite al usuario registrar sus niveles de glucemia en diferentes etapas del día, así como registrar incidencias en los casos en que corresponda. \\ \midrule
+	\textbf{Precondiciones} &
+	\tabitem Estar registrado.
+	
+	\tabitem Seleccionar la opción \textbf{Registrar glucemia} del menú principal - icono de lápiz.
+	\\ \midrule
+	\textbf{Acciones} & 
+	\enumeratecompacto{
+		\item El usuario introduce su nivel de glucemia.
+		\item El usuario introduce una incidencia si corresponde.
+	}
+	\\ \midrule
+	\textbf{Postcondiciones} & Se registran ambos datos en la Base de Datos. \\ \midrule
+	\textbf{Excepciones} & No introducir nivel de glucemia o incidencia\\ \midrule
+	\textbf{Importancia} & Alta \\ 
+}
+
+\tablaAncho
+{CU-3 Calcular Bolo Corrector}
+{p{2.9cm} X}
+{use-case-3}
+{	
+	\textbf{CU-3} & \textbf{Calcular Bolo Corrector} \\ \otoprule
+	\textbf{Versión} & 2.0 \\ \midrule
+	\textbf{Autor} & Luis Miguel Inapanta Oyana \\ \midrule
+	\textbf{Requisitos asociados} & \textbf{RF-2.1, RF-2.2, RF-2.3}\\ \midrule
+	\textbf{Descripción} & Permite al usuario calcular las unidades de insulina que necesita a partir de su nivel de glucemia. \\ \midrule
+	\textbf{Precondiciones} & 
+	\tabitem Estar registrado.
+	
+	\tabitem Seleccionar la opción \textbf{Calcular Bolo} del menú principal - icono de calculadora.
+	
+	\\ \midrule
+	\textbf{Acciones} & 
+	\enumeratecompacto{
+		\item El usuario introduce su nivel de glucemia.
+		\item El usuario introduce una incidencia si corresponde.
+		\item El usuario introduce introduce o elimina uno o varios alimentos a consumir con sus respectivas cantidades (gramos).
+	}
+	\\ \midrule
+	\textbf{Postcondiciones} &
+	\tabitem Se muestra la usuario el bolo corrector calculado por el sistema.	
+	
+	\tabitem Se registran los alimentos con sus respectivas cantidades, el sumatorio de los hidratos de carbono consumidos y el bolo corrector calculado en la Base de Datos. \\ \midrule
+	\textbf{Excepciones} & 
+	\enumeratecompacto{
+		\item No introducir nivel de glucemia o incidencia.
+		\item No introducir cantidad del alimento.
+	}
+	\\ \midrule
+	\textbf{Importancia} & Muy Alta \\ 
+}
+
+\tablaAncho
+{CU-4 Consultar historial de glucemias}
+{p{2.9cm} X}
+{use-case-4}
+{	
+	\textbf{CU-4} & \textbf{Consultar historial de glucemias} \\ \otoprule
+	\textbf{Versión} & 2.0 \\ \midrule
+	\textbf{Autor} & Luis Miguel Inapanta Oyana \\ \midrule
+	\textbf{Requisitos asociados} & \textbf{RF-4}\\ \midrule
+	\textbf{Descripción} & Permite al usuario consultar sus niveles de glucemia de manera gráfica. \\ \midrule
+	\textbf{Precondiciones} &
+	\tabitem Estar registrado.
+	
+	\tabitem Seleccionar la opción \textbf{Historial de glucemias} del menú principal - icono de gráfica.
+	\\ \midrule
+	\textbf{Acciones} & 
+	\enumeratecompacto{
+		\item pendiente aún.
+	}
+	\\ \midrule
+	\textbf{Postcondiciones} & 
+	\tabitem ---Pendiente aún. \\ \midrule
+	\textbf{Excepciones} & 
+	\enumeratecompacto{
+		\item pendiente aún.
+	}
+	\\ \midrule
+	\textbf{Importancia} & Media\\ 
+}
+
+\tablaAncho
+{CU-5 Consultar registros diarios}
+{p{2.9cm} X}
+{use-case-5}
+{	
+	\textbf{CU-5} & \textbf{Consultar registros diarios} \\ \otoprule
+	\textbf{Versión} & 2.0 \\ \midrule
+	\textbf{Autor} & Luis Miguel Inapanta Oyana \\ \midrule
+	\textbf{Requisitos asociados} & \textbf{RF-5.1, RF-5.2} \\ \midrule
+	\textbf{Descripción} & Permite al usuario consultar sus registros de manera simplificada o detallada 
+	\\ \midrule
+	\textbf{Precondiciones} &
+	\tabitem Estar registrado.	
+	
+	\tabitem Seleccionar la opción \textbf{Consultar registros} del menú principal - icono de lupa.	
+	\\ \midrule
+	\textbf{Acciones} & 
+	\enumeratecompacto{
+		\item Seleccionar un \textit{item} de la lista de registros.
+		\item Pulsar el botón \textbf{consultar}.
+	}
+	\\ \midrule
+	\textbf{Postcondiciones} & 
+	\tabitem Se muestran los detalles del registro  \\ \midrule
+	\textbf{Excepciones} & 
+	\enumeratecompacto{
+		\item No seleccionar ningún \textit{item} de la lista.
+	}
+	\\ \midrule
+	\textbf{Importancia} & Alta\\ 
+}
+
+\tablaAncho
+{CU-6 Ajustes}
+{p{2.9cm} X}
+{use-case-6}
+{	
+	\textbf{CU-6} & \textbf{Ajustes} \\ \otoprule
+	\textbf{Versión} & 2.0 \\ \midrule
+	\textbf{Autor} & Luis Miguel Inapanta Oyana \\ \midrule
+	\textbf{Requisitos asociados} & \textbf{RF-6.1, RF-6.2, RF-6.3}\\ \midrule
+	\textbf{Descripción} & Permite al usuario realizar pequeños ajustes en la aplicación. 
+	\\ \midrule
+	\textbf{Precondiciones} &
+	\tabitem Estar registrado.
+	
+	\tabitem Seleccionar la opción \textbf{Ajustes} del sub-menú del menú principal.
+	\\ \midrule
+	\textbf{Acciones} & 
+	\enumeratecompacto{
+		\item Seleccionar un \textit{item} de la lista de ajustes.
+
+	}
+	\\ \midrule
+	\textbf{Postcondiciones} & 
+	\tabitem Permite al usuario modificar sus datos de perfil.
+	
+	\tabitem Permite al usuario realizar una copia de seguridad de sus registros.
+	
+	\tabitem Permite al usuario eliminar sus registros.  \\ \midrule
+	\textbf{Excepciones} & 
+	\enumeratecompacto{
+		\item No seleccionar ningún \textit{item} de la lista.
+		\item Intentar eliminar registros.
+	}
+	\\ \midrule
+	\textbf{Importancia} & Media\\ 
+}
