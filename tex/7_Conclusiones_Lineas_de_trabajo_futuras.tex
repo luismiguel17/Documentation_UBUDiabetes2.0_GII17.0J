@@ -1,4 +1,54 @@
 \capitulo{7}{Conclusiones y Líneas de trabajo futuras}
 
-Todo proyecto debe incluir las conclusiones que se derivan de su desarrollo. Éstas pueden ser de diferente índole, dependiendo de la tipología del proyecto, pero normalmente van a estar presentes un conjunto de conclusiones relacionadas con los resultados del proyecto y un conjunto de conclusiones técnicas. 
-Además, resulta muy útil realizar un informe crítico indicando cómo se puede mejorar el proyecto, o cómo se puede continuar trabajando en la línea del proyecto realizado. 
+En esta sección expondremos las conclusiones extraídas a lo largo y final del proyecto, así como posibles líneas de trabajo futuras.
+\section{Conclusiones}
+Este apartado lo dividiremos en varias partes, cada una con una conclusión.
+\subsection{Dinámica del proyecto}
+El desarrollo del proyecto ha sido muy satisfactorio.  Estoy seguro de que esta etapa de la carrera ha sido de gran utilidad para mi en cuanto a adquisición de experiencia profesional y personal. 
+Por otra parte, el hecho de que el proyecto se haya desarrollado con la participación de diferentes actores que podría encontrar en cualquier proyecto del mercado laboral, creo que es una experiencia muy importante y que ha sido de gran ayuda para ver cómo se trabaja en este tipo de proyectos. 
+En cuanto a los objetivos conseguidos, cabe mencionar que se han conseguido cumplir con todos a excepción de uno de ellos: Ampliar la lista de alimentos. A pesar de ello, se ha conseguido una aplicación final muy mejorada y útil  con respecto a la versión anterior.
+
+Por otra parte, debo agradecer a Raúl Marticorena Sánchez, tutor del proyecto, quien me ha marcado desde el principio y durante cada semana todas las tareas que debía realizar así como los errores o fallos que se presentaban durante el desarrollo del proyecto.
+\subsection{Técnica y lenguaje de desarrollo}
+Se ha utilizado el entorno de desarrollo Android Studio, el cual, tiene Java como lenguaje base de programación.
+
+Tras finalizar el proyecto, puedo concluir que, Android Studio ofrece un gran número de alternativas al desarrollador, y que a bien seguro continuaré estudiando y trabajando con ello.
+
+\subsection{Aprendizaje}
+El desconocimiento del entorno de desarrollo Android me ha obligado a estudiar nuevas herramientas y considerar los pros y contras cuando se dispone de diferentes opciones para realizar una misma tarea, lo cual ha sido de gran importancia para mí como desarrollador.
+\subsection{Comparativa con la versión anterior}
+Para hacer una comparativa de nuestra aplicación final con la versión anterior, mencionaremos las distintas funcionalidades que disponían cada una.
+\subsubsection{UBUDiabetes 1.0}
+\begin{itemize}
+	\item Calcular Bolo Corrector: Esta opción traía ciertos \textcolor{RedTxt}{fallos}. Para ciertos casos de pruebas la aplicación no obtenía el resultado correcto.
+	\item Registro de glucemias: \textcolor{GreenTxt}{OK}.
+	\item Incidencias: \textcolor{GreenTxt}{OK}.
+	\item Historial de glucemias: \textcolor{OrangeTxt}{Limitado}. Sólo mostraba gráficamente los valores de la última semana.
+	\item Ajustes: \textcolor{OrangeTxt}{Limitado}. Sólo se podía realizar ajustes en el perfil de usuario.
+	\item Interactividad usuario-aplicación: \textcolor{OrangeTxt}{Media}.
+	\item Interfaz: Estática.
+\end{itemize}
+\subsubsection{UBUDiabetes 2.0}
+\begin{itemize}
+	\item Calcular Bolo Corrector: \textcolor{GreenTxt}{OK}.
+	\item Registro de glucemias: \textcolor{GreenTxt}{OK}.
+	\item Incidencias: \textcolor{GreenTxt}{OK}.
+	\item Historial de glucemias: \textcolor{GreenTxt}{OK}.
+	\item Consultar registros: \textcolor{GreenTxt}{OK}.
+	\item Ajustes: \textcolor{GreenTxt}{OK}. Se pueden realizar 3 configuraciones: Perfil, Copia de seguridad y Liberar espacio.
+	\item Interactividad usuario-aplicación: \textcolor{GreenTxt}{Alta}.
+	\item Pruebas: \textcolor{GreenTxt}{OK}. Pruebas unitarias y pruebas de interacción de usuario (UI).
+	\item Interfaz: Dinámica.
+\end{itemize}
+\section{Líneas de trabajo futuras}
+Como mencionó Raúl MArticorena Sánchez en una de las reuniones, este proyecto servirá de referencia para futuras mejoras.
+
+A partir de esta segunda versión funcional hay que pensar en las opciones que se pueden plantear de cara a una nueva versión, funciones que no se pudieron añadir por falta de tiempo, así como mejoras que se pueden llevar a cabo. Alguna de estas funciones o mejoras coinciden con las mencionadas en el TFG de Mario López Jiménez~\cite{mario2016}:
+\begin{itemize}
+	\item Añadir la posibilidad de exportar los datos almacenados en la base de datos SQLite de la aplicación en algún formato que pueda resultar útil para el usuario.
+	\item Ampliar la base de datos de alimentos.
+	\item Adaptar la aplicación para tablets aprovechando el diseño de la misma en \textit{fragments}.
+	\item Incluir un ratio de insulina diferente para cada momento del día.
+	\item Tener en cuenta otros factores que puedan influir al paciente, estrés, periodo premenstrual etc. 
+	
+\end{itemize}

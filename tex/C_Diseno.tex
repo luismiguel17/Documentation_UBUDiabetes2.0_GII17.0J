@@ -1,11 +1,372 @@
 \apendice{Especificación de diseño}
 
 \section{Introducción}
-
+A continuación, especificaremos la manera en la que hemos organizado cada uno de los elementos del proyecto y detallaremos las razones de por qué lo hemos hecho así. Algunos datos son similares a los del TFG de Mario López Jiménez~\cite{mario2016}.
 \section{Diseño de datos}
-
+Gran parte de este apartado coincide con la primera versión de nuestro proyecto. Aún así, mostraremos todos los datos.
+\begin{table}[]
+	\centering
+	\caption{Base de datos. Glucemias}
+	\label{tabla:BDGlucemias}
+	\rowcolors {2}{gray!35}{}
+	\begin{tabular}{l p{4cm} p{4cm}}
+	\toprule
+	\textbf{Campo}     &\textbf{Tipo} 				& \textbf{Descripción} 		\\ 	\midrule    \\ 	
+	\textbf{Id}        & Integer Primary Key Autoincrement  	& Clave primaria.\\ 
+	\textbf{Fecha}     & Text	Not Null					   	& Fecha de registro.\\ 
+	\textbf{Periodo}   & Text   Not Null						& Periodo del registro del valor.\\ 
+	\textbf{Valor}     & Integer Not Null						& Valor de Glucemia.               	   
+\\ \bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[]
+	\centering
+	\caption{Base de datos. Incidencias}
+	\label{tabla:BDIncidencias}
+	\rowcolors {2}{gray!35}{}
+	\begin{tabular}{l p{4cm} p{4cm}}
+	\toprule
+	\textbf{Campo}     &\textbf{Tipo} 				& \textbf{Descripción} 		\\ 	\midrule    \\ 	
+	\textbf{Id}        & Integer Primary Key Autoincrement  	& Clave primaria.\\ 
+	\textbf{Tipo}	   & Text Not Null							& Tipo de incidencia.\\
+	\textbf{Fecha}     & Text Not Null							& Fecha de la incidencia. \\ 
+	\textbf{Observaciones}   & Text Not Null					& Observaciones asociadas a la incidencia.\\ 
+	\textbf{Glucemia}  & Integer Not Null						& Clave primaria de la glucemia asociada.                	   
+\\ \bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[]
+	\centering
+	\caption{Base de datos. Alimentos}
+	\label{tabla:BDAlimentos}
+	\rowcolors {2}{gray!35}{}
+	\begin{tabular}{l p{4cm} p{4cm}}
+	\toprule
+	\textbf{Campo}     &\textbf{Tipo} 				& \textbf{Descripción} 		\\ 	\midrule    \\ 	
+	\textbf{Tipo Alimento} & Tex Primary Key Autoincrement  	& Tipo de alimento.\\ 
+	\textbf{Alimento}	   & Integer Primary Key			 	& Nombre del alimento.\\
+	\textbf{Ración}        & Integer Not Null				    & Ración media del alimento.\\  
+	\textbf{Índice glucémico}  & Integer Not Null				& Índice glucémico del alimento.                	   
+\\ \bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[]
+	\centering
+	\caption{Base de datos. Registros diarios}
+	\label{tabla:BDRegistrosDiarios}
+	\rowcolors {2}{gray!35}{}
+	\begin{tabular}{l p{4cm} p{4cm}}
+	\toprule
+	\textbf{Campo}     &\textbf{Tipo} 				& \textbf{Descripción} 		\\ 	\midrule    \\ 	
+	\textbf{Id} 	   & Integer Primary Key Autoincrement  	& Clave primaria de la tabla.    \\ 
+	\textbf{Fecha}     & Text Not Null					 		& Fecha de registro.\\
+	\textbf{Sum\_HC}    & Real Not Null				    		& Total Hidratos de carbono registrado.\\  
+	\textbf{Bolo\_Corrector}  & Real Not Null					& Bolo Corrector registrado.                	   
+\\ \bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[]
+	\centering
+	\caption{Base de datos. Detalles Registros diarios}
+	\label{tabla:BDDetallesRegistrosDiarios}
+	\rowcolors {2}{gray!35}{}
+	\begin{tabular}{l p{4cm} p{4cm}}
+	\toprule
+	\textbf{Campo}     &\textbf{Tipo} 				& \textbf{Descripción} 		\\ 	\midrule    \\ 	
+	\textbf{Id} 	   & Integer Primary Key Autoincrement  	& Clave primaria de la tabla.    \\ 
+	\textbf{Id\_lista}  & Integer Not Null					 	& Clave primaria del registro asociado. \\
+	\textbf{Alimento}  & Text Not Null				    		& Alimento registrado.     \\  
+	\textbf{Cantidad}  & Real Not Null							& Cantidad en gramos del alimento registrado.                	   
+\\ \bottomrule
+\end{tabular}
+\end{table}
+\newpage
+Por último, aunque no se trata de una tabla de la base de datos, mencionaremos otro de los métodos utilizados para administrar los datos. En esta caso estamos hablando de la interfaz \textit{SharedPreferences} que proporciona Android para acceder y modificar los datos de preferencia del usuario. Este objeto constará de la siguiente colección de datos:
+\begin{table}[]
+	\centering
+	\caption{SharedPreferences. PreferenciasUsuario}
+	\label{tabla:BDDetallesRegistrosDiarios}
+	\rowcolors {2}{gray!35}{}
+	\begin{tabular}{l p{4cm} p{4cm}}
+	\toprule
+	\textbf{Campo}     &\textbf{Tipo} 				& \textbf{Descripción} 		\\ 	\midrule    \\ 	
+	\textbf{primerejecución} 	   & Boolean	  	& Si la aplicación se ejecuta por primera vez.\\ 
+	\textbf{nombre}  & String						& Nombre del usuario. \\
+	\textbf{edad}  	 & String 						& Edad del usuario. \\
+	\textbf{estatura}  & String						& Estatura del usuario.     \\  
+	\textbf{peso}  	 & String						& Peso del usuario. \\
+	\textbf{min}  	 & String						& Valor de glucemia mínimo deseado. \\               						\textbf{max}  	 & String						& Valor de glucemia máximo deseado. \\
+	\textbf{udsBasal}  & String						& Uds de insulina basal. \\
+	\textbf{udsRapida} & String						& Uds de insulina rápida. \\
+	\textbf{rapida}  & Boolean						& Insulina del bolo. \\
+	\textbf{ultrarrapida}  & Boolean				& Insulina del bolo. \\
+	\textbf{Cero}  	& Boolean						& Cero decimales en el bolo corrector. \\
+	\textbf{Uno}  	& Boolean						& Un decimal en el bolo corrector. \\
+	\textbf{Dos}  	& Boolean						& Dos decimales en el bolo corrector.\\
+	\textbf{Imagen}  & String						& Path de la imagen de perfil del usuario. 
+\\ \bottomrule
+\end{tabular}
+\end{table}
+\newpage
 \section{Diseño procedimental}
+En el momento en el que el usuario ejecuta la aplicación, el sistema lanzará la pantalla de bienvenida (Splash Screen) y comprobará si es la primera vez que se ejecuta la aplicación. Si es así, se mostrará la pantalla de registro para que el usuario pueda registrarse en la aplicación, de lo contrario se mostrará la pantalla de Menú Principal. Desde esta pantalla el usuario podrá realizar cualquier acción que desee y que se encuentre en la pantalla Menú Principal.
 
+A continuación, con los diagramas de secuencias, explicaremos el funcionamiento interno del sistema.
+
+
+En la figura~\ref{fig:DiagramSequence_UserRegister} se muestra como sucede el proceso de registro.
+\imagen{DiagramSequence_UserRegister}{Proceso de \textit{registro}}{0.9}
+
+Si el proceso que queremos realizar es registrar un nivel de glucemia, se seguirá el diagrama de la figura \ref{fig:DiagramSequence_GlucemiaRegister}.
+\imagen{DiagramSequence_GlucemiaRegister}{Registro de un nivel de glucemia}{0.9}
+
+Si el proceso que queremos realizar es calcular el bolo corrector, se seguirá el diagrama de la figura \ref{fig:DiagramSequence_CalculateBolo}.
+\imagen{DiagramSequence_CalculateBolo}{Calcular bolo corrector}{0.9}
+
+Si el proceso que queremos realizar es consultar el historial de glucemias, se seguirá el diagrama de la figura \ref{fig:DiagramSequence_HistoricalGlucemias}.
+\imagen{DiagramSequence_HistoricalGlucemias}{Consultar historial de glucemias}{0.9}
+
+Si el proceso que queremos realizar es consultar los registros (listas de ingestas), se seguirá el diagrama de la figura \ref{fig:DiagramSequence_DailyRecords}.
+\imagen{DiagramSequence_DailyRecords}{Consultar registros}{0.9}
+
+Finalmente, si el proceso que queremos realizar es Ajustes de la aplicación, se seguirá el diagrama de la figura \ref{fig:DiagramSequence_Settings}.
+\imagen{DiagramSequence_Settings}{Ajustes}{0.9}
 \section{Diseño arquitectónico}
+\subsection{Diseño de paquetes}\label{sec:disenopaquetes}
+Podemos observar en la figura~\ref{fig:packagesUBUDiabetes} que la aplicación está estructurada principalmente en 3 paquetes. Estos paquetes o estructura de paquetes la crea Android Studio automáticamente al crear un nuevo proyecto.
+\imagen{packagesUBUDiabetes}{Ajustes}{0.5}
+En este apartado hablaremos de los paquetes en los que hemos modificado y/o añadido nuevos elementos: \textbf{\textit{java}} y \textbf{\textit{res}}.
+\subsubsection{\textit{java}}\label{sssec:java}
+Este paquete se crea por defecto y en él se generan los 3 paquetes de mayor importancia en la aplicación:
+\begin{itemize}
+	\item \textit{com.ubu.lmi.gii170j}: Este paquete ha sido definido para separar las \textit{clases} y \textit{activitys} de la aplicación según su jerarquía en ella. La estructura dentro de este paquete ha sido redefinida por completo, es decir, su estructura es diferente a la de la versión anterior. Su nueva estructura es la siguiente~\ref{fig:packagesJava_gii170jUBUDiabetes}:
+	\begin{itemize}
+		\item \textit{calculations}: Este paquete contiene únicamente la clase que se encarga de realizar el proceso necesario para el cálculo del bolo corrector de insulina y devolver su resultado.
+		\item \textit{model}: Este paquete es nuevo y contiene las clases necesarias que se utilizan en los \textit{ArrayAdapter}  utilizados en cada una de las listas personalizadas que se visualizan en la aplicación.
+		\item \textit{persistence}: Este paquete mantiene la misma estructura de la versión anterior y en él se encuentran las clases que implementan todo lo necesario para mantener la persistencia de la aplicación. 
+		\item \textit{util}: En este paquete se encuentran las clases que implementan los \textit{ArrayAdapter}  personalizados para la visualización de las distintas listas en la aplicación.
+		\item \textit{view}: Este paquete es similar al utilizado en la versión anterior: \textbf{interfaz}. En el se encuentran únicamente las \textit{activitys}  y los \textit{fragments} que dan funcionalidad a las diferentes pantallas de la aplicación.
+	\end{itemize}
+	\item \textit{com.ubu.lmi.gii170j(test)}: Este paquete ha sido definido para separar los \textit{test unitarios} de la aplicación. La estructura de este paquete es nueva~\ref{fig:packagesJava_gii170jTestUBUDiabetes}:
+	\begin{itemize}
+		\item \textit{calculations}: Este paquete contiene únicamente las clases que realizan los test unitarios para los casos clínicos reales aportados por Diego Serrano Gómez.
+		\item \textit{view}: Este paquete contiene la clase que testea la \textit{activity} \textbf{Carbohidratos}. Únicamente testea que esta actividad realiza correctamente los cálculos de gramos de hidratos de carbono. Para estos test, se utilizan los datos que se recogen en el documento pdf ``Indicaciones para la corrección de UBUDiabetes 1.0''. Este documento fue proporcionado por Raúl Marticorena Sánchez
+	\end{itemize}
+	\item \textit{com.ubu.lmi.gii170j(androidTest)}: Este paquete ha sido definido para separar los \textit{test instrumentales} (\textit{Test en Espresso}) de la aplicación. La estructura de este paquete es nueva~\ref{fig:packagesJava_gii170jAndroidTestUBUDiabetes}:
+	\begin{itemize}
+		\item \textit{view}: Este paquete contiene las clases que realizan los test para la interfaz de usuario. Estos tests se realizaron con el \textit{framework} \textbf{Espresso}.
+	\end{itemize}
+\end{itemize}
+\imagen{packagesJava_gii170jUBUDiabetes}{Paquetes Java 1}{0.5}
+\imagen{packagesJava_gii170jTestUBUDiabetes}{Paquetes Java 2}{0.5}
+\imagen{packagesJava_gii170jAndroidTestUBUDiabetes}{Paquetes Java 3}{0.5}
+\subsubsection{\textit{res}}\label{sssec:res}
+Este paquete contiene los recursos utilizados por la aplicación.
+\begin{itemize}
+	\item \textit{drawable}: Este paquete contiene los archivos \textit{xml} con cada uno de los diseños de las imágenes, botones e iconos utilizados en la aplicación. 
+	\item \textit{layout}: Este paquete contiene los archivos \textit{xml} con cada uno de los diseños que definen la estructura visual para la interfaz de usuario.
+	\item \textit{menu}: Este paquete contiene los archivos \textit{xml} con cada uno de los diseños que definen los sub-menús de la aplicación.
+	\item \textit{mipmap}:  Este paquete contiene las imágenes de los iconos personalizados utilizados en la \textit{activity} \textbf{Ajustes}. A su vez contiene las imágenes del icono de la aplicación en sus diferentes resoluciones.
+	\item \textit{values}: Este paquete contiene varios archivos de recursos:
+	\begin{itemize}
+		\item \textit{arrays}: Archivo \textit{xml} que contiene cada uno de los elementos utilizado en los objetos \textit{spinner} e índice glucemico y ración de HC de los alimentos.
+		\item \textit{colors}: Archivo \textit{xml} que contiene los colores definidos para la aplicación.
+		\item \textit{strings}: Archivo \textit{xml} que contiene todos los \textit{strings} (textos) utilizados para la aplicación. En caso de querer añadir un idioma nuevo, habría que duplicar estos archivos, traduciendo estos \textit{Strings} al idioma deseado.
+		\item \textit{styles}: Archivo \textit{xml} que contiene los estilos definidos para la aplicación.
+	\end{itemize}
+\end{itemize}
+\subsection{Diseño de clases}
+\subsubsection{Paquete \textit{calculations}}
+\begin{itemize}
+	\item CalculaBolo~\ref{fig:CalculaBoloClass}: Esta clase realiza los pasos necesarios para el cálculo del bolo corrector.
+	\imagen{CalculaBoloClass}{Clase CalculaBolo}{0.6}
+\end{itemize}
+\subsubsection{Paquete \textit{model}}
+\begin{itemize}
+	\item Alimento~\ref{fig:AlimentoClass}: Esta clase se utiliza para crear el objeto que irá dentro de la lista \textbf{Lista de Ingesta} de la pantalla \textit{Carbohidratos}.
+	\imagen{AlimentoClass}{Clase Alimento}{0.6}
+	\item DetallesIngesta~\ref{fig:DetallesIngestaClass}: Esta clase se utiliza para crear el objeto que irá dentro de la lista \textbf{Detalles de la lista} de la pantalla \textit{Detalles}.
+	\imagen{DetallesIngestaClass}{Clase DetallesIngesta}{0.7}
+	\item RegistroIngestas~\ref{fig:RegistroIngestasClass}: Esta clase se utiliza para crear el objeto que irá dentro de la lista \textbf{Registros diarios} de la pantalla \textit{Listas de Ingestas}.
+	\imagen{RegistroIngestasClass}{Clase RegistroIngestas}{0.7}
+\end{itemize}
+\subsubsection{Paquete \textit{persistence}}
+\begin{itemize}
+	\item DataBaseHelper~\ref{fig:DataBaseHelperClass}: Esta clase se utiliza para crear la base de datos.
+	\imagen{DataBaseHelperClass}{Clase DataBaseHelper}{0.7}
+	\item DataBaseManager~\ref{fig:DataBaseManagerClass}: Esta clase se utiliza para crear la parte lógica de la base de datos.
+	\imagen{DataBaseManagerClass}{Clase DataBaseManager}{0.6}
+	\item ValoresPOJO~\ref{fig:ValoresPOJOClass}: Esta clase se utiliza para crear el objeto \textit{POJO} con los datos médicos del usuario.
+	\imagen{ValoresPOJOClass}{Clase ValoresPOJO}{0.9}
+\end{itemize}
+\subsubsection{Paquete \textit{util}}
+\begin{itemize}
+	\item AjustesListAdapter~\ref{fig:AjustesListAdapterClass}: Esta clase se utiliza para crear el \textit{ArrayAdapter} personalizado para la lista de \textbf{Ajustes}.
+	\imagen{AjustesListAdapterClass}{Clase AjustesListAdapter}{0.7}
+	\item ChartListAdapter~\ref{fig:ChartListAdapterClass}: Esta clase se utiliza para crear el \textit{ArrayAdapter} personalizado para la lista de \textbf{Historial de glucemias}.
+	\imagen{ChartListAdapterClass}{Clase ChartListAdapter}{0.7}
+	\item IngestaAlimentoListAdapter~\ref{fig:IngestaAlimentoListAdapterClass}: Esta clase se utiliza para crear el \textit{ArrayAdapter} personalizado para la lista \textbf{Lista de Ingesta}.
+	\imagen{IngestaAlimentoListAdapterClass}{Clase IngestaAlimentoListAdapter}{0.7}
+	\item IngestaDetallesListAdapter~\ref{fig:IngestaDetallesListAdapterClass}: Esta clase se utiliza para crear el \textit{ArrayAdapter} personalizado para la lista \textbf{Detalles de la lista}.
+	\imagen{IngestaDetallesListAdapterClass}{Clase IngestaDetallesListAdapter}{0.7}
+	\item IngestaRegistroListAdapter~\ref{fig:IngestaRegistroListAdapterClass}: Esta clase se utiliza para crear el \textit{ArrayAdapter} personalizado para la lista \textbf{Registros diarios}.
+	\imagen{IngestaRegistroListAdapterClass}{Clase IngestaRegistroListAdapter}{0.9}
+	\item ListViewUtility~\ref{fig:ListViewUtilityClass}: Esta clase se utiliza para que nos permita adaptar el tamaño de una \textit{listView} según el número de \textit{items} que contenga.
+	\imagen{ListViewUtilityClass}{Clase ListViewUtility}{0.7}
+\end{itemize}
+\subsubsection{Paquete \textit{view}}
+Como se ha mencionado en la sección~\ref{sssec:java} este paquete contiene las \textit{activitys} que dan funcionalidad a las distintas pantallas de la aplicación. Así mismo, cada una de las \textit{activitys} contiene su propio \textit{fragment}.
+\begin{itemize}
+	\item Ajustes~\ref{fig:AjustesClass}: \textit{Activity} encargada de gestionar el menú de Ajustes de la aplicación.
+	\imagen{AjustesClass}{\textit{Activity} Ajustes}{0.5}
+	\imagen{AjustesFragmentClass}{\textit{Fragment} Ajustes}{0.7}
+	\item Carbohidratos~\ref{fig:CarbohidratosClass1}~\ref{fig:CarbohidratosClass2}: Esta \textit{activity} gestiona el registro de los alimentos a ingerir por parte del usuario. Además es la encargada de llamar a la clase CalculaBolo para obtener el resultado y mostrárselo al usuario por pantalla.
+	\imagen{CarbohidratosClass1}{\textit{Activity} Carbohidratos A}{0.9}
+	\imagen{CarbohidratosClass2}{\textit{Activity} Carbohidratos B}{0.9}
+	\imagen{CarbohidratosFragmentClass}{\textit{Fragment} Carbohidratos}{0.7}
+	\item ConsultaDetallesListaIngestas~\ref{fig:ConsultaDetallesListaIngestaClass}: Esta \textit{activity} es la encargada de gestionar los elementos necesarios para que el usuario pueda consultar \textbf{los detalles} de sus registros diarios referentes a los alimentos ingeridos y al cálculo del bolo corrector. 
+	\imagen{ConsultaDetallesListaIngestaClass}{\textit{Activity} ConsultaDetallesListaIngesta}{0.7}
+	\imagen{ConsultaDetallesListaIngestaFragmentClass}{\textit{Fragment} ConsultaDetallesListaIngesta}{0.7}
+	\item Historial~\ref{fig:ConsultaDetallesListaIngestaClass}: Esta \textit{activity} es la encargada de gestionar los elementos necesarios para que el usuario pueda consultar el historial de sus registros de glucemias de manera gráfica.
+	\imagen{HistorialClass}{\textit{Activity} Historial}{1}
+	\imagen{HistorialFragmentClass}{\textit{Fragment} Historial}{0.7}
+	\item Incidencias~\ref{fig:IncidenciasClass}: Esta \textit{activity} es la encargada de gestionar los elementos necesarios para que el usuario pueda registrar una incidencia en los casos que corresponda. Es lanzada desde
+RegistroGlucemias si el valor introducido en ella por el usuario es superior o inferior al margen marcado por los valores mínimo y máximo de glucemia del perfil de usuario.
+	\imagen{IncidenciasClass}{\textit{Activity} Incidencias}{0.9}
+	\imagen{IncidenciasFragmentClass}{\textit{Fragment} Incidencias}{0.7}
+	\item Launcher~\ref{fig:LauncherClass}: Esta clase es la encargada de marcar el comportamiento de la aplicación cada vez que la abrimos. Si es la primera vez que se ejecuta la aplicación, lanzará la \textit{activity} Registro, sino, lanza directamente la \textit{activity} MenuPrincipal.
+	\imagen{LauncherClass}{\textit{Clase} Launcher}{0.7}
+	\item MenuPrincipal~\ref{fig:MenuPrincipalClass}: Esta es la \textit{activity} principal de la aplicación. Gestiona el menú principal de la aplicación, donde el usuario selecciona que funciones de la aplicación quiere utilizar.
+	\imagen{MenuPrincipalClass}{\textit{Activity} MenuPrincipal}{0.7}
+	\imagen{MenuPrincipalFragmentClass}{\textit{Fragment} MenuPrincipal}{0.7}
+	\item Registro~\ref{fig:RegistroClass}: Esta \textit{activity} es la encargada de gestionar los elementos necesarios para que el usuario pueda validar y registrar sus datos de perfil.
+	\imagen{RegistroClass}{\textit{Activity} Registro}{0.9}
+	\imagen{RegistroFragmentClass}{\textit{Fragment} Registro}{0.7}
+	\item RegistroGlucemias~\ref{fig:RegistroGlucemiasClass}: Esta \textit{activity} es la encargada de gestionar los elementos necesarios para que el usuario pueda seleccionar el periodo en que ha realizado la medición de glucemia, y registre el valor correspondiente en la aplicación. Es lanzada al seleccionar la opción \textbf{Registro} de glucemias en
+el MenuPrincipal, o como primer paso al seleccionar la opción de \textbf{Calcular bolo}.
+	\imagen{RegistroGlucemiasClass}{\textit{Activity} RegistroGlucemias}{0.7}
+	\imagen{RegistroGlucemiasFragmentClass}{\textit{Fragment} RegistroGlucemias}{0.7}
+	\item RegistroListaIngesta~\ref{fig:RegistroListaIngestaClass}: Esta \textit{activity} es la encargada de gestionar los elementos necesarios para que el usuario pueda consultar sus registros diarios referentes a los alimentos ingeridos y al cálculo del bolo corrector.
+	\imagen{RegistroListaIngestaClass}{\textit{Activity} RegistroListaIngesta}{0.7}
+	\imagen{RegistroListaIngestaFragmentClass}{\textit{Fragment} RegistroListaIngesta}{0.7}
+	\item SplashScreen~\ref{fig:SplashScreenClass}:  Esta \textit{activity} es la encargada de dar la ``bienvenida'' al usuario mostrando una imagen con el nombre y color de la aplicación. Esta \textit{activity} es la primera en lanzarse al abrir la aplicación, posteriormente se lanza la \textit{activity} Launcher.
+	\imagen{SplashScreenClass}{\textit{Activity} SplashScreen}{0.5}
+\end{itemize}
+
+\subsubsection{Paquete que contiene los test Unitarios}
+\begin{itemize}
+	\item CalculaBolo\_CasoClinico\_FalloTest~\ref{fig:CalculaBolo_CasoClinico_FalloTestClass}: Esta \textit{clase} contiene las pruebas para el caso clínico que se recoge en la hoja ``Casos clínicos'' del documento \textit{Excel} proporcionado por Diego Serrano Gómez.
+	\imagen{CalculaBolo_CasoClinico_FalloTestClass}{Test: Caso clínico}{0.5}
+	\item CalculaBolo\_NoPreciso\_Test~\ref{fig:CalculaBolo_NoPreciso_TestClass}: Esta \textit{clase} contiene las pruebas para el caso clínico que se recoge en la hoja ``Sin alimentos 1'' del documento \textit{Excel} proporcionado por Diego Serrano Gómez.
+	\imagen{CalculaBolo_NoPreciso_TestClass}{Test: Sin alimentos 1}{0.5}
+	\item CalculaBolo\_Preciso\_Tes~\ref{fig:CalculaBolo_Preciso_TestClass}: Esta \textit{clase} contiene las pruebas para el caso clínico que se recoge en la hoja ``Alimentos de 1 en 1'' del documento \textit{Excel} proporcionado por Diego Serrano Gómez.
+	\imagen{CalculaBolo_Preciso_TestClass}{Test: Alimentos de 1 en 1}{0.5}
+\end{itemize}
+\section{Diseño de pruebas}
+En cuanto al diseño de pruebas, se han llevado a cabo una serie de \textit{Unit Tests} y \textit{User Interactions Tests} en sus correspondientes paquetes~\ref{sec:disenopaquetes}.
+Para ello se han realizado las siguientes tareas para probar la aplicación:
+\subsubsection{Diseño de las pruebas}
+En este apartado se pretende identificar la o las técnicas de pruebas que se utilizarán para probar la aplicación.
+
+Estas técnicas se agrupan en:
+\begin{itemize}
+	\item \textit{Técnicas de caja blanca o estructurales}: Esta técnica se basa en un examen minucioso de los detalles procedimentales del código a evaluar. En este caso, hemos llevado a cabo una serie de pruebas relacionadas con el cálculo del bolo de insulina y el cálculo de gramos de hidratos de carbono (HC). Para ello hemos utilizado la estrategia de \textbf{Pruebas Unitarias (Unit Tests)}.
+	\item \textit{Técnicas de caja negra o funcionales}: Esta técnica se basa en realizar pruebas sobre la interfaz de la aplicación, es decir, sobre la funcionalidad que debe realizar la misma. En este caso, por falta de tiempo no hemos probado toda la funcionalidad de la aplicación, únicamente se han probado un par de interfaces o pantallas. Para ello hemos utilizado la estrategia de \textbf{Espresso UI tests}.
+\end{itemize}
+\subsubsection{Generación de los casos de prueba}
+En este apartado se pretende generar los datos que se utilizarán como entrada para ejecutar nuestra aplicación. Más concretamente, se trata de determinar el conjunto de entradas, condiciones de ejecución y resultados esperados para un objetivo particular.
+
+En nuestro caso, el conjunto de datos los obtuvimos por parte de Bruno Martín Gómez y Diego Serrano Gómez. Estos datos se recogen en un documento \textit{Excel} en el que se pueden observar un conjunto de hojas en las que se recogen distintos casos clínicos reales, y un documento \textit{pdf} en el que se recogen diferentes fórmulas para el cálculo del bolo de insulina y el cálculo de gramos de HC. Los datos utilizados para la realización de las distintas pruebas unitarias son:
+\begin{itemize}
+	\item Hoja ``Sin alimentos 1'': Cálculo del bolo de insulina para 14 pacientes diferentes con distintas necesidades de insulina diaria. Glucemia objetivo de 120 mg/dl y una glucemia de 250, 225, 200 y 175.
+	\imagen{UT_SinAlimentos1_1}{Caso de prueba 1}{0.5}
+	\imagen{UT_SinAlimentos1_2}{Caso de prueba 2}{0.5}
+	\imagen{UT_SinAlimentos1_3}{Caso de prueba 3}{0.5}
+	\imagen{UT_SinAlimentos1_4}{Caso de prueba 4}{0.5}
+	
+	\item Hoja ``Alimentos de 1 en 1'': Comprobación del cálculo de bolo de insulina para un paciente con una glucemia igual a la glucemia objetivo para distintos alimentos.
+	\imagen{UT_Alimentos1_1_A}{Caso de prueba 5: Datos paciente}{0.4}
+	\imagen{UT_Alimentos1_1_B1}{Caso de prueba 5: Datos alimentos 1}{0.7} 
+	\imagen{UT_Alimentos1_1_B2}{Caso de prueba 5: Datos alimentos 2}{0.7}
+	\imagen{UT_Alimentos1_1_B3}{Caso de prueba 5: Datos alimentos 3}{0.7}
+	\imagen{UT_Alimentos1_1_B4}{Caso de prueba 5: Datos alimentos 4}{0.7}
+	\imagen{UT_Alimentos1_1_B5}{Caso de prueba 5: Datos alimentos 5}{0.7}
+	\imagen{UT_Alimentos1_1_B6}{Caso de prueba 5: Datos alimentos 6}{0.7}
+	\imagen{UT_Alimentos1_1_B7}{Caso de prueba 5: Datos alimentos 7}{0.7}
+	\imagen{UT_Alimentos1_1_B8}{Caso de prueba 5: Datos alimentos 8}{0.7}
+	\imagen{UT_Alimentos1_1_B9}{Caso de prueba 5: Datos alimentos 9}{0.7}
+	\imagen{UT_Alimentos1_1_B10}{Caso de prueba 5: Datos alimentos 10}{0.7}
+	\imagen{UT_Alimentos1_1_B11}{Caso de prueba 5: Datos alimentos 11}{0.7}
+	\imagen{UT_Alimentos1_1_B12}{Caso de prueba 5: Datos alimentos 12}{0.7}
+	\imagen{UT_Alimentos1_1_B13}{Caso de prueba 5: Datos alimentos 13}{0.7}
+	\item Hoja ``Casos clínicos'': Un único caso clínico en el que se recogen sus datos médicos, dos alimentos y se bolo de insulina esperado. Este caso de prueba fue de gran utilidad ya que se sabía que la versión anterior de nuestra aplicación obtenía ciertos resultados erróneos en este caso concreto.
+	\begin{itemize}
+		\item Perfil de usuario:
+		\begin{itemize}
+			\item Glucemia min: 100.
+			\item Glucemia max: 120.
+			\item Tipo de insulina: Rápida.
+			\item Insulina basal: 20.
+			\item Insulina rápida: 20.
+			\item Momento del cálculo: Antes de desayunar.
+			\item Valor de glucemia: 130.
+		\end{itemize}
+		\item Cálculo del bolo:
+		\begin{itemize}
+			\item Tipo de alimento 1: Lácteos.
+			\item Alimento 1: Leche entera.
+			\item Gramos alimento 1: 250.
+			\item Tipo de alimento 2: Fruta.
+			\item Alimento 2: Kiwi.
+			\item Gramos alimento 2: 100.
+		\end{itemize}
+		\item Resultados:
+		\begin{itemize}
+			\item Uds insulina teóricas: 2.33
+			\item Uds insulina UBUDiabetes: 2 (resultado versión anterior)
+		\end{itemize}
+	\end{itemize}
+	\item Documento ``Indicaciones para la corrección de UBUDiabetes'':
+	
+	\textbf{Unidades de insulina}:
+	\[ \textrm{Unidades de insulina} = \frac{\textrm{Gramos HC}}{\textrm{Ratio de insulina}} + \frac{\textrm{Glucemia inicial} - \textrm{Glucemia objetivo}}{\textrm{Factor de sensibilidad}}\]
+
+\textbf{Ratio de insulina}:
+\[ \textrm{Ratio de insulina} = \frac{500}{\textrm{Insulina basal}+\textrm{Insulina rápida}}\]
+
+\textbf{Factor de sensibilidad a la insulina (FSI)}:
+\[ \textrm{FSI para la insulina rápida} = \frac{1500}{\textrm{Insulina basal}+\textrm{Insulina rápida}}\]
+\[ \textrm{FSI para la insulina ultrarrápida} = \frac{1800}{\textrm{Insulina basal}+\textrm{Insulina rápida}}\]
+
+\textbf{Glucemia objetivo}:
+
+\[ \textrm{Glucemia objetivo} = \frac{\textrm{Glucemia máxima + \textrm{Glucemia mínima}}}{2}\]
+\end{itemize}
+
+
+En cuanto a los datos para las pruebas con \textit{Espresso}, se utilizaron los mismos que para los test unitarios.
+\subsubsection{Definición de los procedimientos de las pruebas}
+Antes de empezar con la realización de las pruebas unitarias, cabe mencionar, que primero se tuvo que corregir los fallos en los cálculos de bolo de insulina en la versión anterior. Tras corregir dichos fallos se empezó a crear los primeros test unitarios.
+El proceso que se llevó a cabo para la realización de las pruebas unitarias fue el siguiente:
+\begin{itemize}
+	\item Creamos una \textit{clase} para cada documento u hoja que contenga los datos a probar. En este caso, disponemos de 3 hojas de \textit{Excel} y un documento \textit{pdf}, con lo cual, creamos 4 \textit{clases} en su correspondiente paquete.
+	\item Creamos los \textit{métodos} necesarios para probar el cálculo del bolo de insulina.
+	\item Introducimos los datos y realizamos los cálculos de forma manual.
+	\item Comprobamos que los resultados obtenidos de forma manual son iguales a los esperados (resultados obtenidos en cada documento).
+\end{itemize}
+
+El proceso que se llevó a cabo para la realización de las pruebas de interacción de usuario fue el siguiente:
+\begin{itemize}
+	\item Creamos una \textit{clase} por cada pantalla que se desee probar.
+	\item Establecemos la \textit{@Rule} (Regla) necesaria para cada clase.
+	\item Creamos los \textit{métodos} necesarios para probar la interacción del usuario.
+	\item Introducimos los datos de forma manual en cada elemento que se desee probar para establecer una acción del usuario.
+	\item Comprobamos que la acción obtenida manualmente es la obtenida por la aplicación.
+\end{itemize}
+Estos tests serán llevados a cabo por el desarrollador y pueden ser modificados o añadidos en cualquier momento.
+\subsubsection{Ejecución de las pruebas}
+Los test unitarios se ejecutarán en el \textbf{JVM} local.
+
+En cuanto a los UI tests, se ejecutarán en un emulador creado previamente.
 
 

@@ -2,7 +2,7 @@
 \babel@toc {spanish}{}
 \contentsline {chapter}{\'{I}ndice general}{\es@scroman {i}}{section*.1}
 \contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {iii}}{section*.2}
-\contentsline {chapter}{\'{I}ndice de tablas}{\es@scroman {iv}}{section*.3}
+\contentsline {chapter}{\'{I}ndice de tablas}{\es@scroman {vii}}{section*.3}
 \contentsline {appendix}{\chapternumberline {A}Plan de Proyecto Software}{1}{appendix.Alph1}
 \contentsline {section}{\numberline {A.1}Introducci\IeC {\'o}n}{1}{section.Alph1.1}
 \contentsline {section}{\numberline {A.2}Planificaci\IeC {\'o}n temporal}{1}{section.Alph1.2}
@@ -17,38 +17,79 @@
 \contentsline {subsection}{Sprint 8 - Abril 26-2018 - Mayo 10-2018}{9}{section*.12}
 \contentsline {subsection}{Sprint 9 - Mayo 10-2018 - Mayo 18-2018}{10}{section*.13}
 \contentsline {subsection}{Sprint 10 - Mayo 18-2018 - Mayo 25-2018}{11}{section*.14}
-\contentsline {subsection}{Sprint 10 - Mayo 18-2018 - Junio 07-2018}{12}{section*.15}
-\contentsline {section}{\numberline {A.3}Estudio de viabilidad}{13}{section.Alph1.3}
-\contentsline {subsection}{Viabilidad econ\IeC {\'o}mica}{13}{section*.16}
-\contentsline {subsubsection}{Coste de personal}{13}{section*.17}
-\contentsline {subsubsection}{Coste de hardware}{14}{section*.18}
-\contentsline {subsubsection}{Coste de software}{14}{section*.19}
-\contentsline {subsubsection}{Coste total}{14}{section*.20}
-\contentsline {subsection}{Viabilidad legal}{15}{section*.21}
-\contentsline {subsubsection}{Apache License V2.0}{15}{section*.22}
-\contentsline {appendix}{\chapternumberline {B}Especificaci\IeC {\'o}n de Requisitos}{17}{appendix.Alph2}
-\contentsline {section}{\numberline {B.1}Introducci\IeC {\'o}n}{17}{section.Alph2.1}
-\contentsline {section}{\numberline {B.2}Objetivos generales}{17}{section.Alph2.2}
-\contentsline {section}{\numberline {B.3}Catalogo de requisitos}{17}{section.Alph2.3}
-\contentsline {subsection}{Requisitos funcionales}{18}{section*.23}
-\contentsline {subsection}{Requisitos no funcionales}{19}{section*.24}
-\contentsline {section}{\numberline {B.4}Especificaci\IeC {\'o}n de requisitos}{20}{section.Alph2.4}
-\contentsline {subsection}{Actores}{20}{section*.25}
-\contentsline {subsection}{Diagrama de casos de uso}{21}{section*.26}
-\contentsline {appendix}{\chapternumberline {C}Especificaci\IeC {\'o}n de dise\IeC {\~n}o}{29}{appendix.Alph3}
-\contentsline {section}{\numberline {C.1}Introducci\IeC {\'o}n}{29}{section.Alph3.1}
-\contentsline {section}{\numberline {C.2}Dise\IeC {\~n}o de datos}{29}{section.Alph3.2}
-\contentsline {section}{\numberline {C.3}Dise\IeC {\~n}o procedimental}{29}{section.Alph3.3}
-\contentsline {section}{\numberline {C.4}Dise\IeC {\~n}o arquitect\IeC {\'o}nico}{29}{section.Alph3.4}
-\contentsline {appendix}{\chapternumberline {D}Documentaci\IeC {\'o}n t\IeC {\'e}cnica de programaci\IeC {\'o}n}{31}{appendix.Alph4}
-\contentsline {section}{\numberline {D.1}Introducci\IeC {\'o}n}{31}{section.Alph4.1}
-\contentsline {section}{\numberline {D.2}Estructura de directorios}{31}{section.Alph4.2}
-\contentsline {section}{\numberline {D.3}Manual del programador}{31}{section.Alph4.3}
-\contentsline {section}{\numberline {D.4}Compilaci\IeC {\'o}n, instalaci\IeC {\'o}n y ejecuci\IeC {\'o}n del proyecto}{31}{section.Alph4.4}
-\contentsline {section}{\numberline {D.5}Pruebas del sistema}{31}{section.Alph4.5}
-\contentsline {appendix}{\chapternumberline {E}Documentaci\IeC {\'o}n de usuario}{33}{appendix.Alph5}
-\contentsline {section}{\numberline {E.1}Introducci\IeC {\'o}n}{33}{section.Alph5.1}
-\contentsline {section}{\numberline {E.2}Requisitos de usuarios}{33}{section.Alph5.2}
-\contentsline {section}{\numberline {E.3}Instalaci\IeC {\'o}n}{33}{section.Alph5.3}
-\contentsline {section}{\numberline {E.4}Manual del usuario}{33}{section.Alph5.4}
-\contentsline {chapter}{Bibliograf\'{\i }a}{35}{appendix*.27}
+\contentsline {subsection}{Sprint 11 - Junio 15-2018 - Junio 22-2018}{12}{section*.15}
+\contentsline {subsection}{Sprint 12 - Junio 22-2018 - Junio 26-2018}{13}{section*.16}
+\contentsline {subsection}{Sprint 13 - Mayo 18-2018 - Junio 07-2018}{14}{section*.17}
+\contentsline {subsection}{Sprint 14 - Junio 07-2018 - Junio 15-2018}{15}{section*.18}
+\contentsline {subsection}{Sprint 15 - Junio 15-2018 - Junio 22-2018}{16}{section*.19}
+\contentsline {subsection}{Sprint 16 - Junio 22-2018 - Junio 26-2018}{17}{section*.20}
+\contentsline {section}{\numberline {A.3}Estudio de viabilidad}{18}{section.Alph1.3}
+\contentsline {subsection}{Viabilidad econ\IeC {\'o}mica}{18}{section*.21}
+\contentsline {subsubsection}{Coste de personal}{18}{section*.22}
+\contentsline {subsubsection}{Coste de hardware}{19}{section*.23}
+\contentsline {subsubsection}{Coste de software}{19}{section*.24}
+\contentsline {subsubsection}{Coste total}{19}{section*.25}
+\contentsline {subsection}{Beneficios}{19}{section*.26}
+\contentsline {subsection}{Viabilidad legal}{23}{section*.27}
+\contentsline {subsubsection}{Apache License V2.0}{23}{section*.28}
+\contentsline {appendix}{\chapternumberline {B}Especificaci\IeC {\'o}n de Requisitos}{25}{appendix.Alph2}
+\contentsline {section}{\numberline {B.1}Introducci\IeC {\'o}n}{25}{section.Alph2.1}
+\contentsline {section}{\numberline {B.2}Objetivos generales}{25}{section.Alph2.2}
+\contentsline {section}{\numberline {B.3}Cat\IeC {\'a}logo de requisitos}{25}{section.Alph2.3}
+\contentsline {subsection}{Requisitos funcionales}{26}{section*.29}
+\contentsline {subsection}{Requisitos no funcionales}{27}{section*.30}
+\contentsline {section}{\numberline {B.4}Especificaci\IeC {\'o}n de requisitos}{28}{section.Alph2.4}
+\contentsline {subsection}{Actores}{28}{section*.31}
+\contentsline {subsection}{Diagrama de casos de uso}{29}{section*.32}
+\contentsline {appendix}{\chapternumberline {C}Especificaci\IeC {\'o}n de dise\IeC {\~n}o}{37}{appendix.Alph3}
+\contentsline {section}{\numberline {C.1}Introducci\IeC {\'o}n}{37}{section.Alph3.1}
+\contentsline {section}{\numberline {C.2}Dise\IeC {\~n}o de datos}{37}{section.Alph3.2}
+\contentsline {section}{\numberline {C.3}Dise\IeC {\~n}o procedimental}{40}{section.Alph3.3}
+\contentsline {section}{\numberline {C.4}Dise\IeC {\~n}o arquitect\IeC {\'o}nico}{45}{section.Alph3.4}
+\contentsline {subsection}{Dise\IeC {\~n}o de paquetes}{45}{section*.33}
+\contentsline {subsubsection}{\textit {java}}{46}{section*.34}
+\contentsline {subsubsection}{\textit {res}}{48}{section*.35}
+\contentsline {subsection}{Dise\IeC {\~n}o de clases}{49}{section*.36}
+\contentsline {subsubsection}{Paquete \textit {calculations}}{49}{section*.37}
+\contentsline {subsubsection}{Paquete \textit {model}}{49}{section*.38}
+\contentsline {subsubsection}{Paquete \textit {persistence}}{51}{section*.39}
+\contentsline {subsubsection}{Paquete \textit {util}}{53}{section*.40}
+\contentsline {subsubsection}{Paquete \textit {view}}{56}{section*.41}
+\contentsline {subsubsection}{Paquete que contiene los test Unitarios}{66}{section*.42}
+\contentsline {section}{\numberline {C.5}Dise\IeC {\~n}o de pruebas}{68}{section.Alph3.5}
+\contentsline {subsubsection}{Dise\IeC {\~n}o de las pruebas}{68}{section*.43}
+\contentsline {subsubsection}{Generaci\IeC {\'o}n de los casos de prueba}{69}{section*.44}
+\contentsline {subsubsection}{Definici\IeC {\'o}n de los procedimientos de las pruebas}{80}{section*.45}
+\contentsline {subsubsection}{Ejecuci\IeC {\'o}n de las pruebas}{80}{section*.46}
+\contentsline {appendix}{\chapternumberline {D}Documentaci\IeC {\'o}n t\IeC {\'e}cnica de programaci\IeC {\'o}n}{81}{appendix.Alph4}
+\contentsline {section}{\numberline {D.1}Introducci\IeC {\'o}n}{81}{section.Alph4.1}
+\contentsline {section}{\numberline {D.2}Estructura de directorios}{81}{section.Alph4.2}
+\contentsline {subsection}{C\IeC {\'o}digo fuente}{81}{section*.47}
+\contentsline {subsection}{Documentaci\IeC {\'o}n}{82}{section*.48}
+\contentsline {section}{\numberline {D.3}Manual del programador}{83}{section.Alph4.3}
+\contentsline {subsection}{Android Studio}{83}{section*.49}
+\contentsline {subsubsection}{Requisitos m\IeC {\'\i }nimos}{83}{section*.50}
+\contentsline {subsubsection}{Instalaci\IeC {\'o}n}{83}{section*.51}
+\contentsline {subsubsection}{Dependencias}{84}{section*.52}
+\contentsline {subsection}{DB Broser for SQLite}{85}{section*.53}
+\contentsline {subsection}{SonarLint}{85}{section*.54}
+\contentsline {subsection}{Emuladores}{86}{section*.55}
+\contentsline {section}{\numberline {D.4}Compilaci\IeC {\'o}n, instalaci\IeC {\'o}n y ejecuci\IeC {\'o}n del proyecto}{86}{section.Alph4.4}
+\contentsline {section}{\numberline {D.5}Pruebas del sistema}{88}{section.Alph4.5}
+\contentsline {appendix}{\chapternumberline {E}Documentaci\IeC {\'o}n de usuario}{91}{appendix.Alph5}
+\contentsline {section}{\numberline {E.1}Introducci\IeC {\'o}n}{91}{section.Alph5.1}
+\contentsline {section}{\numberline {E.2}Requisitos de usuarios}{91}{section.Alph5.2}
+\contentsline {section}{\numberline {E.3}Instalaci\IeC {\'o}n}{91}{section.Alph5.3}
+\contentsline {section}{\numberline {E.4}Manual del usuario}{92}{section.Alph5.4}
+\contentsline {subsection}{SplashScreen}{93}{section*.56}
+\contentsline {subsection}{Registro-Perfil de usuario}{93}{section*.57}
+\contentsline {subsection}{Men\IeC {\'u} principal}{95}{section*.58}
+\contentsline {subsection}{Registro de glucemias}{96}{section*.59}
+\contentsline {subsection}{Incidencias}{99}{section*.60}
+\contentsline {subsection}{C\IeC {\'a}lculo del bolo corrector}{100}{section*.61}
+\contentsline {subsection}{Carbohidratos}{101}{section*.62}
+\contentsline {subsection}{Historial de glucemias}{104}{section*.63}
+\contentsline {subsection}{Consultar registros}{105}{section*.64}
+\contentsline {subsection}{Ajustes}{108}{section*.65}
+\contentsline {subsection}{Acerca de}{108}{section*.66}
+\contentsline {chapter}{Bibliograf\'{\i }a}{109}{appendix*.67}

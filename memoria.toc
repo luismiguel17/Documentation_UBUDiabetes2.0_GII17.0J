@@ -59,9 +59,17 @@
 \contentsline {subsection}{Perfil-Registro}{34}{section*.38}
 \contentsline {subsection}{Men\IeC {\'u} Principal}{36}{section*.39}
 \contentsline {subsection}{Carbohidratos}{37}{section*.40}
-\contentsline {subsection}{Listas de Ingestas y Detalles de la lista}{39}{section*.41}
-\contentsline {subsection}{Ajustes}{40}{section*.42}
-\contentsline {subsection}{Otras decisiones}{42}{section*.43}
+\contentsline {subsection}{Listas de Ingestas y Detalles de la lista}{40}{section*.41}
+\contentsline {subsection}{Ajustes}{41}{section*.42}
+\contentsline {subsection}{Otras decisiones}{43}{section*.43}
 \contentsline {chapter}{Trabajos relacionados}{47}{chapter*.44}
 \contentsline {chapter}{Conclusiones y L\IeC {\'\i }neas de trabajo futuras}{49}{chapter*.45}
-\contentsline {chapter}{Bibliograf\'{\i }a}{51}{chapter*.46}
+\contentsline {section}{\numberline {7.1}Conclusiones}{49}{section.7.1}
+\contentsline {subsection}{Din\IeC {\'a}mica del proyecto}{49}{section*.46}
+\contentsline {subsection}{T\IeC {\'e}cnica y lenguaje de desarrollo}{50}{section*.47}
+\contentsline {subsection}{Aprendizaje}{50}{section*.48}
+\contentsline {subsection}{Comparativa con la versi\IeC {\'o}n anterior}{50}{section*.49}
+\contentsline {subsubsection}{UBUDiabetes 1.0}{50}{section*.50}
+\contentsline {subsubsection}{UBUDiabetes 2.0}{50}{section*.51}
+\contentsline {section}{\numberline {7.2}L\IeC {\'\i }neas de trabajo futuras}{51}{section.7.2}
+\contentsline {chapter}{Bibliograf\'{\i }a}{53}{chapter*.52}

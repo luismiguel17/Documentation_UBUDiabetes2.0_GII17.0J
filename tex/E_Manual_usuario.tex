@@ -1,11 +1,131 @@
 \apendice{Documentación de usuario}
 
 \section{Introducción}
+En este apartado se detallarán tanto el manual de instalación como los pasos necesarios para
+aprender a utilizar la aplicación.
+Alguno de los puntos detallados a continuación son similares a la versión anterior, aunque en su mayoría son nuevos ya que la interfaz de usuario ha sido redefinida casi por completo.
 
 \section{Requisitos de usuarios}
-
+Para poder utilizar la aplicación en nuestro dispositivo móvil o tablet, los requisitos mínimos necesarios son:
+\begin{itemize}
+	\item Sistema Operativo: Android.
+	\item Versión SO: min 4.1 (Jelly Bean) max 8.0 (Oreo).
+	\item Espacio libre: 2GB.
+\end{itemize}
 \section{Instalación}
+La instalación de una aplicación en un dispositivo Android es muy sencilla. Necesitaremos realiza los siguientes pasos:
+\begin{itemize}
+	\item Descargar el archivo \textit{apk} de la aplicación. Esto lo podemos hacer de las siguientes maneras:
+	\begin{itemize}
+		\item Mover el archivo a nuestro dispositivo: Si disponemos del archivo en un ordenador, debemos conectar el dispositivo a nuestro ordenador mediante cable USB en modo \textbf{Transferencia de medios (MTP)}. Una vez conectado copiamos el archivo \textit{apk} en la tarjeta SD (o memoria interna) de nuestro dispositivo.\ Se recomienda crear una carpeta adicional con el nombre de la aplicación para poder ubicarla mejor.
+		\item Descargar el archivo \textit{apk} de internet: Lo único que debemos hacer es dirigirnos a la pagina: \url{https://github.com/luismiguel17/UBUDiabetes2.0_GII17.0J/releases} y descargar la última versión \textit{apk} de la aplicación.
+	\end{itemize}
+	\item Habilitar la opción \textbf{Orígenes desconocidos} en nuestro dispositivo. Esta opción suele encontrarse en el menú: \textbf{Ajuestes\textbackslash{Seguridad}}.
+	\item Buscar el archivo \textit{apk} en nuestro dispositivo y ejecutarlo.
+	\item Durante la instalación de la aplicación, el asistente nos preguntará si queremos instalar la aplicación, damos clic en Instalar (Aceptar).
+	\item Al abrir la aplicación instalada, el asistente de Android nos pedirá aceptar los permisos que la aplicación requiera, debemos aceptarlos.
+\end{itemize}
+\section{Manual del usuario}\label{sec:manualuser}
+A continuación, se explica el funcionamiento de la aplicación con un ejemplo de un caso real. Este caso lo hemos tomado de los casos de estudio propuestos por Diego Serrano Gómez (los utilizados para el \textit{testing} de la aplicación).
 
-\section{Manual del usuario}
+Datos del usuario:
+\begin{itemize}
+	\item Datos personales (Datos cualesquiera):
+	\begin{itemize}
+		\item Nombre y Apellidos: David Pérez González. 
+		\item Edad: 24
+		\item Altura(cm): 175
+		\item Peso(Kg): 80
+	\end{itemize}
+	\item Dato médicos (Datos reales):
+	\begin{itemize}
+		\item Glucemia min deseada: 100.
+		\item Glucemia max deseada: 120.
+		\item Insulina del bolo: Rápida.
+		\item Unidades de insulina basal: 20.
+		\item Unidades de insulina rápida. 20.
+		\item Numero de decimales en el bolo corrector. 2.
+	\end{itemize}
+\end{itemize}
+\subsection{SplashScreen}
+Al arrancar la aplicación, siempre se mostrará una pantalla de bienvenida con el nombre y colores de la aplicación.
+\imagen{SplashScreen}{SplashScreen}{0.4}
+\subsection{Registro-Perfil de usuario}\label{ssec:registroperfil}
+En la ventana de Registro-Perfil de usuario debemos rellenar los datos referentes a las características del usuario. Es necesario rellenar todos los campos, en caso contrario, al darle a GUARDAR la aplicación nos mostrará un mensaje para avisarnos del error. Además, debemos introducir los valores de glucemia entre los limites expuestos (80-250) y en el orden mín-máx.
 
+Los datos más importantes de esta pantalla son los valores mínimo y máximo de glucemia deseados, y las unidades de insulina basal y rápidas diarias. Los primeros se utilizarán para registrar o no incidencias en caso de salirnos de esos límites, mientras que los segundos se utilizan directamente para el cálculo del bolo corrector. El resto de los valores son importantes para mantener un perfil del usuario y para futuras funcionalidades de la aplicación, pero no son necesarios para el cálculo del bolo ni para otras funcionalidades de la aplicación actual. 
+En cuanto al dato Decimales en el Bolo corrector, únicamente sirve para indicar al sistema cuantos decimales debe mostrar al final en el cálculo del bolo corrector.
 
+Debemos mencionar también, que el usuario tiene la opción de añadir una foto a su perfil.
+
+\imagen{ManualUsuario_RegistroPerfil_A}{Registro-Perfil de Usuario 1}{0.5}
+\imagen{ManualUsuario_RegistroPerfil_B}{Registro-Perfil de Usuario 2}{0.5}
+\subsection{Menú principal}\label{ssec:menuprincipal}
+Una vez introducidos los datos del perfil, la pantalla principal de la aplicación será la del menú principal. 
+
+En este menú principal disponemos de 4 opciones:
+\begin{itemize}
+	\item \textbf{1: Calcular bolo}~\ref{ssec:calculabolo}. Nos permite calcular el bolo corrector después de realizar dos pasos: Registro de glucemias~\ref{ssec:registroglu} y Recuento de carbohidratos~\ref{ssec:carbos}.
+	\item \textbf{2: Registro de glucemias}~\ref{ssec:registroglu}. Nos lleva a la pantalla de registro de glucemias donde podemos introducir el valor de glucemia actual para guardarlo en la base de datos.
+	\item \textbf{3: Historial de glucemias}~\ref{ssec:historialglu}. Nos permite consultar gráficamente los valores medios, máximos y mínimos de glucemias según el mes seleccionado.
+	\item \textbf{4: Consultar registros}~\ref{ssec:consultarregistros}. Nos permite consultar los registros diarios relacionados con el cálculo del bolo corrector y la ingesta de alimentos del usuario.
+\end{itemize}
+
+\imagen{ManualUsuario_MenuPrincipal}{Menú principal}{0.5}
+\subsection{Registro de glucemias}\label{ssec:registroglu}
+Esta pantalla podemos seleccionar el periodo del día entre 10 opciones (antes y después de cada ingesta) e introducir nuestro valor de glucemia actual. Una vez conformes con los datos, pulsamos en GUARDAR.
+\imagen{ManualUsuario_ReistroGlucemias_A}{Registro de glucemias A}{0.5}
+\imagen{ManualUsuario_ReistroGlucemias_B}{Registro de glucemias B}{0.5}
+\subsection{Incidencias}\label{ssec:incidencias}
+En el caso de haber introducido un valor fuera de los límites marcados en el perfil de usuario, pasaremos a esta pantalla en la que podemos seleccionar el tipo de incidencia (si es que sabemos cuál es) e introducir opcionalmente unas observaciones sobre la misma. Los tipos de incidencia mostrados varían según el valor de glucemia guardado este fuera de los límites por exceso o por defecto.
+\imagen{ManualUsuario_Incidencias_A}{Incidencias A}{0.5}
+\imagen{ManualUsuario_Incidencias_B}{Incidencias B}{0.5}
+
+\subsection{Cálculo del bolo corrector}\label{ssec:calculabolo}
+A continuación, se describen los pasos a seguir para el cálculo del bolo corrector.
+\begin{itemize}
+	\item Paso 1: Seleccionar la opción \textbf{Calcular bolo} del menú principal.
+	\item Paso 2: Registrar el valor de glucemia actual~\ref{ssec:registroglu}.
+	\item Paso 3: Registrar la incidencia si procede~\ref{ssec:incidencias}.
+	\item Paso 4: Introducir los alimentos a ingerir para el recuento de carbohidratos~\ref{ssec:carbos}.
+	\item Paso 5: Clic en el botón FINALIZAR para mostrar por pantalla el resultado.
+\end{itemize}
+\subsection{Carbohidratos}\label{ssec:carbos}
+A continuación, se describen los pasos a seguir para el recuento de carbohidratos con los siguientes alimentos:
+
+Alimentos a ingerir:
+\begin{itemize}
+	\item Leche entera, 250 grs.
+	\item Kiwi, 100 grs.
+\end{itemize}
+
+Pasos para introducir los alimentos.
+\begin{itemize}
+	\item Paso 1: Buscar el alimento a ingerir en el buscador.
+	\item Paso 2: Seleccionar el alimento de la lista filtrada por el buscador.
+	\item Paso 3: Introducir los gramos a ingerir del alimento seleccionado.
+	\item Paso 4: Añadir el alimento y su cantidad a la lista de ingesta pulsando el botón ``+'' de color verde.
+	\item Paso 5: Si se desea eliminar un alimento de la lista, se mantiene pulsado el alimento y se pulsa el botón ``x'' de color rojo.
+	\item Paso 6: Una vez finalizada la lista de alimentos, pulsar el botón FINALIZAR para obtener el bolo corrector. Dependiendo del resultado obtenido, la aplicación mostrará ciertas recomendaciones al usuario.
+\end{itemize}
+
+\imagen{ManualUsuario_Carbihidratos}{Carbohidratos A}{0.5}
+\imagen{ManualUsuario_Carbihidratos_B}{Carbohidratos B}{0.5}
+\imagen{ManualUsuario_Carbihidratos_C}{Carbohidratos C}{0.5}
+\subsection{Historial de glucemias}\label{ssec:historialglu}
+Si el usuario quiere consultar su historial del mes de Junio, una vez seleccionada dicha opción del menú principal, debe seleccionar el mes de la lista de meses disponible en la pantalla y posteriormente pulsar el botón BUSCAR. A continuación, se mostrará una lista con las gráficas de cada semana del mes donde el usuario ha registrado sus valores de glucemia.
+
+Si el mes seleccionado no tiene registros, la aplicación mostrará un mensaje informando al usuario de ello.
+\imagen{ManualUsuario_HistorialGlucemias}{Historial de glucemias C}{0.5}
+\subsection{Consultar registros}\label{ssec:consultarregistros}
+Si el usuario quiere consultar sus registros diarios, simplemente debe seleccionar la cuarta opción del menú principal y podrá ver en una lista (resumida) sus registros diarios relacionados con el cálculo del bolo corrector y los alimentos ingeridos.
+
+Tras esto, el usuario puede consultar los detalles de cada registro seleccionando de la lista el registro a consultar y pulsar el botón ``-->'' (flecha hacia la derecha).
+
+\imagen{ManualUsuario_ConsultarRegistros}{Consultar registros}{0.5}
+\imagen{ManualUsuario_ConsultarDetalles}{Consultar detalles de registros}{0.5}
+\subsection{Ajustes}
+Este sub-menú permite al usuario realizar ciertas configuraciones. Por ejemplo, modificar los datos de su perfil. Para ello deberá ir al sub-menú del menú principal y seleccionar la opción Ajustes. En esta pantalla, seleccionamos la acción que queremos realizar, en nuestro caso, Perfil para modificar nuestros datos. Esto nos llevará a la pantalla de Registro-Perfil~\ref{ssec:registroperfil}. Tras modificar nuestros datos, pulsamos el botón GUARDAR.
+\imagen{ManualUsuario_Ajustes}{Ajustes}{0.5}
+\subsection{Acerca de}
+Esta opción mostrara por pantalla información relacionada con la aplicación.

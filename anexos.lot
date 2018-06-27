@@ -1,14 +1,20 @@
 \babel@toc {spanish}{}
 \babel@toc {spanish}{}
 \addvspace {10pt}
-\contentsline {table}{\numberline {A.1}{\ignorespaces Costes totales}}{15}{table.Alph1.1}
+\contentsline {table}{\numberline {A.1}{\ignorespaces Costes totales}}{20}{table.Alph1.1}
 \addvspace {10pt}
-\contentsline {table}{\numberline {B.1}{\ignorespaces CU-1 Registrar datos de perfil}}{22}{table.Alph2.1}
-\contentsline {table}{\numberline {B.2}{\ignorespaces CU-2 Registrar niveles de glucemia}}{23}{table.Alph2.2}
-\contentsline {table}{\numberline {B.3}{\ignorespaces CU-3 Calcular Bolo Corrector}}{24}{table.Alph2.3}
-\contentsline {table}{\numberline {B.4}{\ignorespaces CU-4 Consultar historial de glucemias}}{25}{table.Alph2.4}
-\contentsline {table}{\numberline {B.5}{\ignorespaces CU-5 Consultar registros diarios}}{26}{table.Alph2.5}
-\contentsline {table}{\numberline {B.6}{\ignorespaces CU-6 Ajustes}}{27}{table.Alph2.6}
+\contentsline {table}{\numberline {B.1}{\ignorespaces CU-1 Registrar datos de perfil}}{30}{table.Alph2.1}
+\contentsline {table}{\numberline {B.2}{\ignorespaces CU-2 Registrar niveles de glucemia}}{31}{table.Alph2.2}
+\contentsline {table}{\numberline {B.3}{\ignorespaces CU-3 Calcular Bolo Corrector}}{32}{table.Alph2.3}
+\contentsline {table}{\numberline {B.4}{\ignorespaces CU-4 Consultar historial de glucemias}}{33}{table.Alph2.4}
+\contentsline {table}{\numberline {B.5}{\ignorespaces CU-5 Consultar registros diarios}}{34}{table.Alph2.5}
+\contentsline {table}{\numberline {B.6}{\ignorespaces CU-6 Ajustes}}{35}{table.Alph2.6}
 \addvspace {10pt}
+\contentsline {table}{\numberline {C.1}{\ignorespaces Base de datos. Glucemias}}{37}{table.Alph3.1}
+\contentsline {table}{\numberline {C.2}{\ignorespaces Base de datos. Incidencias}}{38}{table.Alph3.2}
+\contentsline {table}{\numberline {C.3}{\ignorespaces Base de datos. Alimentos}}{38}{table.Alph3.3}
+\contentsline {table}{\numberline {C.4}{\ignorespaces Base de datos. Registros diarios}}{38}{table.Alph3.4}
+\contentsline {table}{\numberline {C.5}{\ignorespaces Base de datos. Detalles Registros diarios}}{39}{table.Alph3.5}
+\contentsline {table}{\numberline {C.6}{\ignorespaces SharedPreferences. PreferenciasUsuario}}{40}{table.Alph3.6}
 \addvspace {10pt}
 \addvspace {10pt}

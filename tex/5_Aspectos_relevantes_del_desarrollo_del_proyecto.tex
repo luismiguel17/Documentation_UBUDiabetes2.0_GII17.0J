@@ -54,7 +54,7 @@ Se propuso a Raúl Marticorena Sanchéz, tutor de este proyecto, la idea de impl
 \subsection{Perfil-Registro}
 Aunque la pantalla de Perfil-Registro ya estaba implementada~\ref{fig:Registro_Perfil_Mario}, se tomó la decisión de modificar su diseño desde cero con el fin de conseguir un diseño más atractivo para el usuario y que vaya acorde con la idea planteada por los miembros del Área de Enfermería mencionados anteriormente.\\
 UBUDiabetes 1.0~\ref{fig:Registro_Perfil_Mario}:
-\imagen{Registro_Perfil_Mario}{Registro-Perfil UBUDiabetes 1.0}{0.3}
+\imagen{Registro_Perfil_Mario}{Registro-Perfil UBUDiabetes 1.0}{0.4}
 \newpage
 UBUDiabetes 2.0~\ref{fig:Registro_Perfil_LuisMiguel_1}~\ref{fig:Registro_Perfil_LuisMiguel_2}:
 \imagen{Registro_Perfil_LuisMiguel_1}{Registro-Perfil UBUDiabetes 2.0 (A)}{0.4}
@@ -114,9 +114,24 @@ Pensando en la escalabilidad de la aplicación, se tomó la decisión de modific
 	\imagen{Arrays_AndroidStudio}{Arrays.xlm Android Studio}{0.4}
 	\imagen{raciones_UBUDiabetes2}{Raciones de HC-UBUDiabetes 2.0}{0.4}
 	\item Iconos personalizados: Se crearon nuevos iconos con la herramienta \textit{Photoshop CC 2017} pensando en la creación de una aplicación amigable e intuitiva. Así mismo, los iconos añaden cierto atractivo y originalidad en cuanto al diseño de la interfaz gráfica del usuario.
-	\item \textit{Testing}: Antes de crear las primeras pruebas unitarias locales o pruebas de Interfaz de usuario es muy importante y necesario configurar las dependencias de prueba para que el proyecto pueda utilizar las API estándar proporcionadas por el framework JUnit 4 y Espresso. Para ello, en el archivo \textbf{build.gradle} de primer nivel de nuestra aplicación, se debe especificar las siguientes bibliotecas como dependencias:
-	\imagen{Android_Configurations}{Configuraciones build.gradle A}{0.9}
-	\imagen{Android_Dependencies}{Configuraciones build.gradle B}{0.9}
+	\item \textit{Testing}: Antes de crear las primeras pruebas unitarias locales o pruebas de Interfaz de usuario es muy importante y necesario comprobar que la estructura del proyecto es la adecuada, es decir, que dentro del directorio \textbf{app\textbackslash{java}} tiene 3 subdirectorios:
+	\begin{itemize}
+		\item Un directorio orientado para la programación del código de la aplicación.
+		\item Un directorio orientado para la programación de las pruebas unitarias.
+		\item Un directorio orientado para la programación de las pruebas instrumentales.
+	\end{itemize}
+Además, se debe comprobar la correcta configuración de las dependencias de prueba para que el proyecto pueda utilizar las API estándar proporcionadas por el framework JUnit 4 y Espresso.
+Así mismo, cabe mencionar que para la realización de los \textit{test unitarios} se tomaron los datos de los casos de prueba proporcionados por Bruno Martín Gómez, que se encuentran recogidos en el documento \textit{excel} \textbf{``Casos validación UBUDiabetes''}. Dentro de este documento se han utilizado las siguientes hojas:
+\begin{itemize}
+	\item \textbf{Sin alimentos 1 y Sin alimentos 2}: Estas hojas recogen varios casos de prueba de pacientes con diferentes necesidades de insulina. Estos datos fueron utilizados en la clase ``CalculaBolo\_NoPreciso\_Test'' dentro del directorio: \\ \textbf{app\textbackslash{java}\textbackslash{com.ubu.lmi.gii170j(test)}\textbackslash{calculos}}
+	Estos test toleran cierto margen de error debido a que los resultados en dichas hojas son valores enteros y sin aplicar ninguna fórmula, lo que no se puede comprobar si los resultados obtenidos por la aplicación son del todo correctos ya que estos son valores con decimales, es decir, valores exactos.
+	\item \textbf{Alimentos de 1 en 1}: Esta hoja recoge varios resultados del bolo corrector para un paciente con una glucemia igual a la glucemia objetivo. Estos datos fueron utilizados en la clase ``CalculaBolo\_Preciso\_Test'' dentro del directorio: \\ \textbf{app\textbackslash{java}\textbackslash{com.ubu.lmi.gii170j(test)}\textbackslash{calculos}}
+	Estos test NO toleran margen de error debido a que los resultados en dicha hoja son valores exactos obtenidos aplicando cierta fórmula, lo que SI se puede comprobar si los resultados obtenidos por la aplicación son correctos ya que estos son valores con decimales, es decir, valores exactos.
+	\item \textbf{Casos clínicos}: Esta hoja recoge un caso de prueba concreto para el que la versión anterior de la aplicación obtenía resultados erróneos. Estos datos fueron utilizados en la clase ``CalculaBolo\_CasoClinico\_FalloTest'' dentro del directorio: \\ \textbf{app\textbackslash{java}\textbackslash{com.ubu.lmi.gii170j(test)}\textbackslash{calculos}}
+	Este test comprueba que el resultado obtenido en esta hoja es igual al obtenido por la aplicación, es decir, comprueba que se ha corregido el error de la versión anterior.
+\end{itemize}
 	
+Por otro lado, las pruebas de interfaz, es decir, las pruebas instrumentales se llevaron a cabo dentro del directorio: \\
+\textbf{app\textbackslash{java}\textbackslash{com.ubu.lmi.gii170j}\textbackslash{interfaz(androidTest)}}
 \end{itemize}
 	

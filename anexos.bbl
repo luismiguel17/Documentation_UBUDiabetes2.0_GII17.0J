@@ -1,9 +1,33 @@
 \begin{thebibliography}{1}
 
+\bibitem{socialdiabetes}
+Víctor Bautista.
+\newblock Socialdiabetes.
+\newblock \url{https://www.socialdiabetes.com/}, 2008.
+
+\bibitem{mario2016}
+Mario~López Jiménez.
+\newblock Ubudiabetes: Aplicación de control de diabetes en dispositivos
+  móviles., 2016.
+
 \bibitem{schwaber2002agile}
 Ken Schwaber and Mike Beedle.
 \newblock {\em Agile software development with Scrum}, volume~1.
 \newblock Prentice Hall Upper Saddle River, 2002.
+
+\bibitem{fundaciondiabetes}
+Unknown.
+\newblock Fundación para la diabetes.
+\newblock
+  \url{http://www.fundaciondiabetes.org/prensa/297/la-diabetes-en-espana},
+  Unknown.
+
+\bibitem{googleplay}
+Unknown.
+\newblock Publicar app en google play.
+\newblock
+  \url{https://cincodias.elpais.com/cincodias/2015/02/01/lifestyle/1422792260_243066.html},
+  Unknown.
 
 \bibitem{wiki:apachelicense}
 Wikipedia.

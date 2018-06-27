@@ -1,11 +1,116 @@
 \apendice{Documentación técnica de programación}
 
 \section{Introducción}
+En este anexo se detalla tanto la información relativa al código de la aplicación, como el manual del programador con todos los pasos a seguir para poder desplegar y cargar el proyecto en una nueva máquina y seguir trabajando sobre el mismo.
 
+Cabe mencionar que la mayoria de los siguientes apartados se han sacado del Manual del programador del proyecto predecesor (consultar~\cite{mario2016}) ya que, de no ser así tendríamos que referenciar continuamente y podría causar problemas a la persona interesada.
 \section{Estructura de directorios}
 
+Nuestro proyecto se divide en dos repositorios principales, uno donde tendremos el código fuente, y otro con la documentación.
+\subsection{Código fuente}\label{ssec:codigofuente}
+El código fuente de la aplicación se encuentra en \textit{Github}. El enlace del repositorio es el siguiente:
+\url{https://github.com/luismiguel17/UBUDiabetes2.0_GII17.0J}
+
+El código fuente se puede obtener mediante cualquiera de las opciones que se nos ofrecen en la plataforma~\ref{fig:CodigoFuente_RepositorioGitHub}: 
+\begin{itemize}
+	\item \textcolor{RedTxt}{A}: Descargándolo en formato \textit{.zip}.
+	\item \textcolor{RedTxt}{B}: Copiándolo directamente al ordenador para ser utilizado desde GitHub Desktop si se tiene instalado.
+	\item \textcolor{RedTxt}{C}: Clonando el repositorio utilizando para ello la URL que nos proporciona GitHub.
+\end{itemize}
+
+\imagen{CodigoFuente_RepositorioGitHub}{Código fuente: GitHub}{0.9}
+
+En el repositorio mencionado en el apartado~\ref{ssec:codigofuente} podemos encontrar todas las carpetas relacionadas con el código fuente del proyecto, es decir, en él podemos encontrar todos los ficheros relacionados únicamente con el proyecto creado en Android Studio.
+\subsection{Documentación}\label{ssec:documentacion}
+La documentación relacionada con el proyecto la podemos recoger en \textit{GitHub}. El enlace del repositorio es el siguiente: \url{https://github.com/luismiguel17/Documentation_UBUDiabetes2.0_GII17.0J}.
+
+La documentación se pude obtener de la misma manera que el código fuente y en ella tenemos las siguientes carpetas:
+\begin{itemize}
+	\item img: Contiene todas las imágenes utilizadas en la memoria y anexos.
+	\item tex: Contiene los distintos archivos en los que se dividen la memoria y los anexos.
+	\item Los \textit{.pdf} de los Anexos y Memoria.
+\end{itemize}
+
 \section{Manual del programador}
+En este apartado vamos a describir como instalar las diferentes herramientas necesarias para realizar el proyecto.
+\subsection{Android Studio}
+\subsubsection{Requisitos mínimos}
+Para Instalar Android Studio en Windows 10, es fundamental comprobar los siguientes requisitos mínimos:
+\begin{itemize}
+	\item Sistema operativo Windows 7/8/10 (32 o 64 bits).
+	\item 2GB de RAM (8GB de memoria RAM recomendado).
+	\item 2GB de espacio libre en el disco (4GB recomendado).
+	\item Resolución mínima de 1280 x 800.
+	\item JDK 8 de java.
+	\item 64 bits y procesador Intel (emulador).
+\end{itemize}
+\subsubsection{Instalación}
+\begin{itemize}
+	\item Paso 1: Ir a la página web principal de desarrolladores de Android y descargar Android Studio:  \url{https://developer.android.com/studio/}.
+	\imagen{AndroidStudioDownload}{Android Studio: Descarga}{0.7}
+	\item Paso 2: Ejecutar el instalador en nuestro equipo de trabajo y comenzar con la instalación.
+	\item Paso 3: Seguir el asistente de instalación de Android Studio hasta completar la instalación. El asistente nos marcará por defecto aquellas configuraciones necesarias para la correcta instalación de android Studio. Se recomienda no realizar ningún cambio en él, excepto si se desea cambiar la ruta de instalación.
+	\imagen{AndroidStudioPathInstalation}{Android Studio: Path de instalación}{0.5}
+	\item Paso 4: Una vez finalice la instalación, Android Studio se conectará a internet y descargará los elementos del \textit{SDK} necesarios para su correcto funcionamiento.
+	\item Paso 5: Una vez finalizada la copia de datos ya podremos ejecutar la plataforma de desarrollo Android Studio.
+\end{itemize}
+\subsubsection{Dependencias}
+Posteriormente a la instalación de Android Studio, se recomienda instalar las dependencias necesarias para el correcto funcionamiento del proyecto. Para ello, únicamente hay que añadir las siguientes líneas de código en el archivo \textit{build.gradle} del módulo de la app:
+\imagen{AndroidStudioDependencies}{Android Studio: Dependencias}{0.8}
+\subsection{DB Broser for SQLite}
+\begin{itemize}
+	\item Paso 1: Ir a la página web principal descargar DB Browser for SQLite: \url{https://sqlitebrowser.org/}.
+	\item Paso 2: Ejecutar el instalador en nuestro equipo de trabajo y comenzar con la instalación.
+	\item Paso 3: Seguir el asistente de instalación hasta completar la instalación. El asistente nos marcará por defecto aquellas configuraciones necesarias para su correcta instalación. Se recomienda no realizar ningún cambio en él, excepto si se desea cambiar la ruta de instalación.
+	\item Paso 4:Una vez finalice la instalación ya podremos ejecutar DB Browser for SQLite.
+\end{itemize}
+\subsection{SonarLint}
+Para analizar la calidad del código se ha comprobado mediante la herramienta \textit{SonarLint} de Android Studio:
+\begin{itemize}
+	\item Paso 1: Desde Android Studio abrimos: File\textbackslash{settings}\textbackslash{Plugins}
+	\item Paso 2: Buscar e instalar el \textit{plugin} \textbf{SonarLint}.
+	\item Paso 3: Para analizar nuestro proyecto debemos abrir: Analyze\textbackslash{Analyze with SonarLint}
+\end{itemize}
+\subsection{Emuladores}
+Para poder ejecutar nuestra proyecto, en nuestro caso, nuestra aplicación, hemos creado distintos emuladores de prueba con distintas versiones del sistema operativo de Android.
 
+La creación de un emulador se detalla en la memoria del proyecto, apartado \textbf{Técnicas y Herramientas\textbackslash{Android Studio}\textbackslash{AVD Manager}}
 \section{Compilación, instalación y ejecución del proyecto}
+El primer paso, antes de cargar el proyecto, será descargar algunos paquetes para ahorrarnos instalaciones futuras:
+\imagen{AndroidStudioSDKPlatforms}{Android Studio: Plataformas}{0.8}
+\imagen{AndroidStudioSDKTools}{Android Studio: Tools}{0.8}
 
+Una vez instalados estos paquetes, pasamos a cargar el proyecto. La forma en la que hemos cargado el proyecto inicial ha sido la opción: Open an existing Android Studio Project~\ref{fig:AndroidStudioNewProject}. Para ello debemos descargar previamente el archivo \textit{.zip}  de \textit{GitHub}. 
+\imagen{AndroidStudioNewProject}{Android Studio: Cargar Proyecto}{0.7}
+
+Seleccionamos el directorio en el que tenemos el proyecto y procedemos a cargarlo. Una vez importado, ya podemos comenzar a trabajar sobre el mismo.
+
+Para ejecutar el proyecto debemos:
+\begin{itemize}
+	\item Paso 1: Ejecutar un emulador creado previamente: \textbf{Tools\textbackslash{AVD Manager}}
+	\item Paso 2: Desde la barra de herramientas de Android Studio: clic en el botón ``Run app'' (icono de color verde con el símbolo play).
+	\item Paso 3: Elegimos el emulador ejecutado previamente y clic en OK.
+\end{itemize}
 \section{Pruebas del sistema}
+Para la realización de las pruebas unitarias se ha seguido en siguiente proceso:
+\begin{itemize}
+	\item Paso 1: Abrimos el archivo Java que contiene el código que deseemos probar.
+	\item Paso 2: Clic en la clase o método que deseemos probar, luego presionamos \textit{Ctrl+Shift+T}.
+	\item Paso 3: En el menú que aparece, hacemos clic en \textit{Create New Test}.
+	\item Paso 4: En el diálogo \textit{Create Test}, editamos los campo necesarios, seleccionamos los métodos que queremos generar y luego clic en OK~\ref{fig:AndroidStudio_CreateNewTest_A}.
+	\item Paso 5: En el diálogo \textit{Choose Destination Directory}, hacemos clic en el conjunto de orígenes correspondiente al tipo de prueba que deseemos crear, en este caso, test para una prueba de unidad local. Luego clic en OK~\ref{fig:AndroidStudio_CreateNewTest_B}.
+	
+	\imagen{AndroidStudio_CreateNewTest_A}{Android Studio: Nuevo Test Unitario A}{0.7}
+	\imagen{AndroidStudio_CreateNewTest_B}{Android Studio: Nuevo Test Unitario B}{0.6}
+\end{itemize}
+Para la realización de las pruebas de interacción de usuario se siguieron los mismos pasos anteriores hasta el paso 4.
+\begin{itemize}
+	\item Paso 5: En el diálogo \textit{Choose Destination Directory}, hacemos clic en el conjunto de orígenes correspondiente al tipo de prueba que deseemos crear, en este caso, androidTest para una prueba instrumentada.
+\end{itemize}
+
+Para ejecutar una prueba podemos hacerlo de cualquiera de las siguientes maneras:
+\begin{itemize}
+	\item Paso 1: Hacemos clic con el botón secundario en una prueba y luego con el primario en Run.
+	\item Paso 2: Para ejecutar todas las pruebas, hacemos clic con el botón secundario en el directorio de pruebas y luego con el primario en \textit{Run tests}.
+\end{itemize}
+IMPORTANTE: Nos aseguramos de que nuestro proyecto esté sincronizado con \textit{Gradle} haciendo clic en \textit{Sync Project} en la barra de herramientas.
